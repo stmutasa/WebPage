@@ -11,7 +11,8 @@
   --ink: #142033;
   --muted: #5c6474;
   --line: #e3dccd;
-  --gold: #a8874d;          /* text-safe brass on ivory */
+  --gold: #7a5c28;          /* text brass on ivory: 5.6:1 contrast */
+  --gold-deco: #b6955b;     /* decorative brass on ivory */
   --gold-hi: #d4bb84;       /* brass on navy */
   --gold-grad: linear-gradient(135deg, #e3cf9f 0%, #c3a265 45%, #9c7a41 100%);
   --on-navy: #ece6da;
@@ -96,7 +97,11 @@ svg.fill { fill: currentColor; stroke: none; }
 .topbar nav a:hover { color: var(--on-navy); }
 .topbar .nav-pill { color: var(--navy); background: var(--gold-grad); }
 .topbar .nav-pill:hover { color: var(--navy); filter: brightness(1.06); }
-@media (max-width: 600px) { .topbar nav a:not(.nav-pill) { display: none; } }
+@media (max-width: 600px) {
+  .topbar nav a { padding: 8px 9px; font-size: .82rem; }
+  .topbar nav a[href$="#about"] { display: none; }
+  .topbar .nav-pill { margin-left: 4px; padding: 8px 13px; }
+}
 
 /* ===================== Hero ===================== */
 .hero {
@@ -221,7 +226,7 @@ svg.fill { fill: currentColor; stroke: none; }
 .states li {
   min-width: 46px; text-align: center; padding: 6px 10px; border-radius: 8px;
   font: 600 .8rem/1.2 var(--sans); letter-spacing: .08em;
-  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--gold-deco, var(--accent)) 60%, transparent); color: var(--accent);
 }
 
 .services { display: grid; gap: 1px; margin-top: 1.5rem; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
@@ -338,3 +343,27 @@ svg.fill { fill: currentColor; stroke: none; }
 .cites a { white-space: nowrap; }
 .two-col { display: grid; gap: 32px; }
 @media (min-width: 860px) { .two-col { grid-template-columns: 1fr 1fr; gap: 64px; } }
+
+/* Sub-heading inside thread titles */
+.sub-h { display: block; margin-top: .45rem; font: 600 .7rem/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+
+/* Apps */
+.apps { list-style: none; margin: 1.75rem 0 0; padding: 0; display: grid; gap: 14px; }
+@media (min-width: 720px) { .apps { grid-template-columns: 1fr 1fr; } }
+.app {
+  display: grid; grid-template-columns: 56px 1fr; gap: 16px; align-items: start;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 20px;
+}
+.app img { width: 56px; height: 56px; border-radius: 22%; box-shadow: 0 2px 8px rgba(14,24,41,.16); background: #fff0; }
+.app h4 { font: 600 1.4rem/1.1 var(--serif); }
+.app .tagline { margin: .2rem 0 .6rem; font-size: .85rem; font-weight: 500; color: var(--accent); }
+.app p { font-size: .92rem; line-height: 1.6; color: var(--muted); margin-bottom: .6rem; }
+.app .stack { margin: 0; font-size: .74rem; letter-spacing: .04em; color: var(--muted); opacity: .85; }
+
+/* Full-width thread (Apps) */
+@media (min-width: 860px) {
+  .thread-wide { grid-template-columns: 1fr; gap: 28px; }
+  .thread-wide .thread-head { position: static; }
+  .thread-wide .thread-body > p { max-width: 46em; }
+}
+@media (min-width: 1040px) { .apps { grid-template-columns: repeat(3, 1fr); } }
