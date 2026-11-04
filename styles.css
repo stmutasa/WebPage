@@ -370,3 +370,6 @@ svg.fill { fill: currentColor; stroke: none; }
 
 .label .asof { letter-spacing: .06em; text-transform: none; font-weight: 500; opacity: .8; margin-left: .4em; }
 .states-pending li { border-style: dashed; color: var(--muted); }
+
+.stats .stat-link { display: grid; gap: 4px; text-decoration: none; color: inherit; }
+.stats li:has(.stat-link):hover { background: color-mix(in srgb, var(--card) 92%, var(--accent)); }
