@@ -367,3 +367,6 @@ svg.fill { fill: currentColor; stroke: none; }
   .thread-wide .thread-body > p { max-width: 46em; }
 }
 @media (min-width: 1040px) { .apps { grid-template-columns: repeat(3, 1fr); } }
+
+.label .asof { letter-spacing: .06em; text-transform: none; font-weight: 500; opacity: .8; margin-left: .4em; }
+.states-pending li { border-style: dashed; color: var(--muted); }
