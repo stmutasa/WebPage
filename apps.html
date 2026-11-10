@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e1829">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e1829'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='27' fill='%23d4bb84' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Apps · Simukayi Mutasa, MD</title>
+  <meta name="description" content="Private, single-user software built by radiologist Simukayi Mutasa, MD: Housecall, DoneX, PortViz and more, shown with synthetic demonstration data.">
+  <link rel="canonical" href="https://stmutasa.github.io/WebPage/apps.html">
+  <meta property="og:site_name" content="Simukayi Mutasa, MD">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Apps · Simukayi Mutasa, MD">
+  <meta property="og:description" content="Private tools for health, money and time: Housecall, DoneX, PortViz and more, shown with synthetic demonstration data.">
+  <meta property="og:url" content="https://stmutasa.github.io/WebPage/apps.html">
+  <meta property="og:image" content="https://stmutasa.github.io/WebPage/assets/og/apps.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@docsimimd">
+  <meta name="twitter:title" content="Apps · Simukayi Mutasa, MD">
+  <meta name="twitter:description" content="Private tools for health, money and time: Housecall, DoneX, PortViz and more, shown with synthetic demonstration data.">
+  <meta name="twitter:image" content="https://stmutasa.github.io/WebPage/assets/og/apps.png">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="mark" href="./" aria-label="Simukayi Mutasa, MD: home">S<span>·</span>M</a>
+      <nav aria-label="Primary">
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="./#practice">Practice</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="apps.html" aria-current="page">Apps</a></li>
+        </ul>
+        <a class="nav-pill" href="./#connect">Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Software</p>
+        <h1>Apps I build</h1>
+        <p>
+          I build software for problems in my own life: health, money and time. Each is a full-stack app
+          that is deployed and in daily use, and each is a private, single-user tool, so there is nothing to
+          download. Screenshots use synthetic demonstration data, not real records.
+        </p>
+        <div class="jump">
+          <a href="#housecall">Housecall</a>
+          <a href="#donex">DoneX</a>
+          <a href="#portviz">PortViz</a>
+          <a href="#more">More projects</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="rec" aria-label="Featured projects">
+        <article class="project" id="housecall" aria-labelledby="housecall-h">
+          <div>
+            <div class="project-head">
+              <img src="assets/apps/housecall.png" width="52" height="52" alt="">
+              <h2 id="housecall-h">Housecall</h2>
+              <span class="badge">Private personal tool</span>
+            </div>
+            <p class="tagline">Your doctor in the family.</p>
+            <dl>
+              <div><dt>Problem</dt><dd>My health data lived in four separate apps (Whoop, Garmin, Withings and an Omron blood-pressure cuff), and none of them connected the numbers to what I was trying to change.</dd></div>
+              <div><dt>What it does</dt><dd>Brings all four sources into one database and dashboard: body composition, 7-day averages and trends. Every morning it composes a brief on progress toward a long-term goal and the current month’s goals, written as a change from the previous day and delivered as a push notification. Meals are logged by photo or by typing what I ate.</dd></div>
+              <div><dt>My contribution</dt><dd>I defined the product: which devices to integrate, a two-tier goal system (one fixed long-term goal plus monthly goals I set myself), and the rule that every brief reports what changed since the last one. I set the design direction and run it on my own Android phone.</dd></div>
+            </dl>
+            <p class="stack">Built with Next.js · Prisma + SQLite · Android shell (Capacitor) · Railway</p>
+          </div>
+          <figure class="shot">
+            <a class="shot-link" href="assets/apps/shots/housecall-desktop.jpg" aria-label="Open full-size screenshot: Housecall Today screen with synthetic data: four letter grades and estimated biological ages">
+              <picture>
+                <source media="(max-width: 600px)" srcset="assets/apps/shots/housecall-mobile.webp" type="image/webp">
+                <source media="(max-width: 600px)" srcset="assets/apps/shots/housecall-mobile.jpg">
+                <source srcset="assets/apps/shots/housecall-desktop.webp" type="image/webp">
+                <img src="assets/apps/shots/housecall-desktop.jpg" width="1440" height="810" alt="Housecall Today screen with synthetic data: four letter grades and estimated biological ages" loading="lazy">
+              </picture>
+            </a>
+            <figcaption>Running locally with synthetic demonstration data. One personal navigation item hidden. Select the image to enlarge.</figcaption>
+          </figure>
+        </article>
+        <article class="project" id="donex" aria-labelledby="donex-h">
+          <div>
+            <div class="project-head">
+              <img src="assets/apps/donex.png" width="52" height="52" alt="">
+              <h2 id="donex-h">DoneX</h2>
+              <span class="badge">Private personal tool</span>
+            </div>
+            <p class="tagline">An AI task companion.</p>
+            <dl>
+              <div><dt>Problem</dt><dd>Tasks reached me through email, text messages and my own head, and a plain to-do list could neither sort them nor plan a day around them.</dd></div>
+              <div><dt>What it does</dt><dd>Tasks with projects, tags, subtasks and recurrence; notes and checklists; a morning briefing and a one-tap day plan; and one inbox where AI triages Gmail and forwarded texts into tasks. Voice capture uses the browser’s built-in speech recognition, so no audio goes to a third-party service.</dd></div>
+              <div><dt>My contribution</dt><dd>I specified the feature set and the self-hosted design: a single container with its own SQLite file on my server, a PIN-protected login, and my own AI key as the only outside dependency, with every AI call made server-side.</dd></div>
+            </dl>
+            <p class="stack">Built with Next.js 15 · SQLite · Docker · installable PWA</p>
+          </div>
+          <figure class="shot">
+            <a class="shot-link" href="assets/apps/shots/donex-desktop.jpg" aria-label="Open full-size screenshot: DoneX Today view listing synthetic overdue, today and anytime tasks with projects, tags and priorities">
+              <picture>
+                <source media="(max-width: 600px)" srcset="assets/apps/shots/donex-mobile.webp" type="image/webp">
+                <source media="(max-width: 600px)" srcset="assets/apps/shots/donex-mobile.jpg">
+                <source srcset="assets/apps/shots/donex-desktop.webp" type="image/webp">
+                <img src="assets/apps/shots/donex-desktop.jpg" width="1365" height="1200" alt="DoneX Today view listing synthetic overdue, today and anytime tasks with projects, tags and priorities" loading="lazy">
+              </picture>
+            </a>
+            <figcaption>Running locally with synthetic demonstration data. Select the image to enlarge.</figcaption>
+          </figure>
+        </article>
+        <article class="project" id="portviz" aria-labelledby="portviz-h">
+          <div>
+            <div class="project-head">
+              <img src="assets/apps/portviz.png" width="52" height="52" alt="">
+              <h2 id="portviz-h">PortViz</h2>
+              <span class="badge">Private personal tool</span>
+            </div>
+            <p class="tagline">Portfolio visualization.</p>
+            <dl>
+              <div><dt>Problem</dt><dd>Brokerage apps show a list of positions. I wanted to see a whole portfolio at once, including private holdings with no public price, and to know how close it was to a margin call.</dd></div>
+              <div><dt>What it does</dt><dd>A treemap of public holdings, grouped by sector, sized by value and colored by return over a chosen period. A register of private holdings valued at the best available market price. A 1–10 margin-call risk score.</dd></div>
+              <div><dt>My contribution</dt><dd>I set the rules: private holdings are valued from the listed price first, then secondary-market quotes, and only then the last funding round. Fees are modelled per holding. Every dollar figure is computed deterministically in code, and the language model is used only for the risk-severity judgment and weekly price research, on a fixed update schedule.</dd></div>
+            </dl>
+            <p class="stack">Built with Python · FastAPI · APScheduler · yfinance · dependency-free JavaScript · PWA</p>
+          </div>
+          <figure class="shot">
+            <a class="shot-link" href="assets/apps/shots/portviz-desktop.jpg" aria-label="Open full-size screenshot: PortViz treemap of a synthetic demo portfolio grouped by sector and colored by return">
+              <picture>
+                <source media="(max-width: 600px)" srcset="assets/apps/shots/portviz-mobile.webp" type="image/webp">
+                <source media="(max-width: 600px)" srcset="assets/apps/shots/portviz-mobile.jpg">
+                <source srcset="assets/apps/shots/portviz-desktop.webp" type="image/webp">
+                <img src="assets/apps/shots/portviz-desktop.jpg" width="1440" height="900" alt="PortViz treemap of a synthetic demo portfolio grouped by sector and colored by return" loading="lazy">
+              </picture>
+            </a>
+            <figcaption>Running locally with synthetic demonstration data. Select the image to enlarge.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section class="rec" id="more" aria-labelledby="more-h">
+        <p class="eyebrow">More projects</p>
+        <h2 id="more-h">Also in use</h2>
+        <p class="count">Smaller write-ups of three more private tools.</p>
+        <ul class="more">
+          <li>
+            <div class="row"><img src="assets/apps/juli-a.png" width="44" height="44" alt=""><h3>Juli-a</h3></div>
+            <span class="badge">Private personal tool</span>
+            <p>A health companion organized around the menstrual cycle, with a weekly AI plan that explains the reasoning behind each recommendation. Built for one user and distributed through TestFlight.</p>
+            <p class="stack">Expo / React Native · Fastify · Postgres</p>
+          </li>
+          <li>
+            <div class="row"><img src="assets/apps/kindred.png" width="44" height="44" alt=""><h3>Kindred</h3></div>
+            <span class="badge">Private personal tool</span>
+            <p>A personal relationship CRM. It records who you met and what you talked about, reminds you to follow up at the right cadence, and drafts messages and pre-meeting briefs.</p>
+            <p class="stack">Next.js · Google sign-in &amp; sync · Web push</p>
+          </li>
+          <li>
+            <div class="row"><img src="assets/apps/iron-condor.png" width="44" height="44" alt=""><h3>The Iron Condor</h3></div>
+            <span class="badge">Private personal tool</span>
+            <p>An options-trading desk with live charts and technicals and a daily briefing. Independent AI analysts write their own takes, and an arbiter model reconciles them into one read.</p>
+            <p class="stack">Next.js · multi-model AI pipeline · Android PWA</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p><a href="./">← Back to home</a></p>
+      <p>© <span id="yr">2026</span> Simukayi Mutasa, MD · Ugen Imaging LLC</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -6,22 +6,40 @@
   <title>Research · Simukayi Mutasa, MD</title>
   <meta name="description" content="Peer-reviewed publications, oral presentations, posters, leadership and honors of Simukayi Mutasa, MD, musculoskeletal radiologist and imaging-AI researcher.">
   <meta name="theme-color" content="#0e1829">
-  <link rel="canonical" href="https://stmutasa.github.io/WebPage/research.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e1829'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='27' fill='%23d4bb84' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://stmutasa.github.io/WebPage/research.html">
+  <meta property="og:site_name" content="Simukayi Mutasa, MD">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research · Simukayi Mutasa, MD">
+  <meta property="og:description" content="Case studies and the full record: 38 peer-reviewed papers on deep learning in musculoskeletal, breast and other imaging, plus talks and posters.">
+  <meta property="og:url" content="https://stmutasa.github.io/WebPage/research.html">
+  <meta property="og:image" content="https://stmutasa.github.io/WebPage/assets/og/research.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@docsimimd">
+  <meta name="twitter:title" content="Research · Simukayi Mutasa, MD">
+  <meta name="twitter:description" content="Case studies and the full record: 38 peer-reviewed papers on deep learning in musculoskeletal, breast and other imaging, plus talks and posters.">
+  <meta name="twitter:image" content="https://stmutasa.github.io/WebPage/assets/og/research.png">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="site.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="mark" href="./" aria-label="Home">S<span>·</span>M</a>
+      <a class="mark" href="./" aria-label="Simukayi Mutasa, MD: home">S<span>·</span>M</a>
       <nav aria-label="Primary">
-        <a href="./#about">About</a>
-        <a href="./#work">Work</a>
-        <a href="research.html" aria-current="page">Research</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="./#practice">Practice</a></li>
+          <li><a href="research.html" aria-current="page">Research</a></li>
+          <li><a href="apps.html">Apps</a></li>
+        </ul>
         <a class="nav-pill" href="./#connect">Connect</a>
       </nav>
     </div>
@@ -37,6 +55,7 @@
           with teaching radiologists how to read and build AI studies.
         </p>
         <div class="jump">
+          <a href="#case-studies">Case studies</a>
           <a href="#publications">38 publications</a>
           <a href="#talks">30 oral presentations</a>
           <a href="#posters">9 posters</a>
@@ -47,81 +66,170 @@
     </section>
 
     <div class="wrap">
+      <!-- ================= CASE STUDIES ================= -->
+      <section class="rec" id="case-studies">
+        <p class="eyebrow">Case studies</p>
+        <h2>Four studies, in brief</h2>
+        <p class="count">Problem, contribution, method, result and limitation for four published studies. Numbers are taken from the final publications. All are research models, not deployed clinical products.</p>
+        <div class="case-grid">
+        <article class="case" id="case-bone-age" aria-labelledby="case-bone-age-h">
+          <div>
+            <p class="case-tag">MSK · Pediatric &nbsp;|&nbsp; J Digit Imaging 2018 · First author</p>
+            <h3 id="case-bone-age-h">Machine-assisted bone age (MABAL)</h3>
+            <dl>
+            <div><dt>Clinical problem</dt><dd>Bone-age reads against the Greulich–Pyle atlas are common, slow and observer-dependent. Earlier deep-learning attempts were limited by small datasets and generic architectures.</dd></div>
+            <div><dt>My contribution</dt><dd>First author, working with Columbia co-authors Chang, Ruzal-Shapiro and Ayyala.</dd></div>
+            <div><dt>Approach</dt><dd>10,289 hand radiographs from our PACS and the public Digital Hand Atlas, split into four sex-and-age cohorts. A custom 14-layer network with residual, inception and spatial-transformer layers was trained from scratch, with augmentation to limit overfitting.</dd></div>
+            <div><dt>Published finding</dt><dd>Aggregate mean absolute error of 0.637 years on validation and 0.536 years on the test set, where the reference standard averaged two pediatric radiologists. At publication, the best reported deep-learning result for bone age.</dd></div>
+            <div><dt>Limitation</dt><dd>One institution’s data plus a public atlas, and training labels came from single clinical reads. A research model, not a clinical product.</dd></div>
+              <div><dt>Read more</dt><dd class="links"><a href="https://doi.org/10.1007/s10278-018-0053-3">Paper (DOI)</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6113150/">Full text (PMC)</a> <a href="https://github.com/stmutasa/RSNABoneAge">Related code: RSNA bone-age challenge</a></dd></div>
+            </dl>
+          </div>
+          <figure>
+            <svg viewBox="0 0 360 170" role="img" aria-labelledby="t-ba d-ba"><title id="t-ba">MABAL pipeline</title><desc id="d-ba">A hand radiograph is routed to one of four networks by sex and age group, each predicting bone age in years. Aggregate test mean absolute error 0.536 years.</desc><rect class="viz-box" x="4" y="58" width="78" height="48" rx="8"/><text class="viz-text" x="43" y="80" text-anchor="middle">Hand</text><text class="viz-text" x="43" y="96" text-anchor="middle">radiograph</text><path class="viz-arrow" d="M82 82 C 100 82, 100 22, 118 22"/><rect class="viz-box" x="118" y="8" width="118" height="28" rx="6"/><text class="viz-muted" x="177" y="26" text-anchor="middle">Girls, younger</text><path class="viz-arrow" d="M236 22 C 254 22, 254 82, 272 82"/><path class="viz-arrow" d="M82 82 C 100 82, 100 60, 118 60"/><rect class="viz-box" x="118" y="46" width="118" height="28" rx="6"/><text class="viz-muted" x="177" y="64" text-anchor="middle">Girls, older</text><path class="viz-arrow" d="M236 60 C 254 60, 254 82, 272 82"/><path class="viz-arrow" d="M82 82 C 100 82, 100 98, 118 98"/><rect class="viz-box" x="118" y="84" width="118" height="28" rx="6"/><text class="viz-muted" x="177" y="102" text-anchor="middle">Boys, younger</text><path class="viz-arrow" d="M236 98 C 254 98, 254 82, 272 82"/><path class="viz-arrow" d="M82 82 C 100 82, 100 136, 118 136"/><rect class="viz-box" x="118" y="122" width="118" height="28" rx="6"/><text class="viz-muted" x="177" y="140" text-anchor="middle">Boys, older</text><path class="viz-arrow" d="M236 136 C 254 136, 254 82, 272 82"/><rect class="viz-box" x="272" y="58" width="84" height="48" rx="8"/><text class="viz-text" x="314" y="80" text-anchor="middle">Bone age</text><text class="viz-text" x="314" y="96" text-anchor="middle">(years)</text><text class="viz-muted" x="314" y="124" text-anchor="middle">Test MAE</text><text class="viz-text" x="314" y="140" text-anchor="middle">0.536 yr</text></svg>
+            <figcaption>Study design as described in the paper. Test MAE is the aggregate across the four cohorts.</figcaption>
+          </figure>
+        </article>
+        <article class="case" id="case-hip-fracture" aria-labelledby="case-hip-fracture-h">
+          <div>
+            <p class="case-tag">MSK · Emergency &nbsp;|&nbsp; J Digit Imaging 2020 · First author</p>
+            <h3 id="case-hip-fracture-h">Femoral neck fracture detection and Garden classification</h3>
+            <dl>
+            <div><dt>Clinical problem</dt><dd>Hip fractures need to be found and classified quickly because displacement drives the surgical choice, but labelled examples, especially nondisplaced Garden I/II fractures, are scarce.</dd></div>
+            <div><dt>My contribution</dt><dd>First author, working with Columbia MSK co-authors Varada, Goel, Wong and Rasiej.</dd></div>
+            <div><dt>Approach</dt><dd>1,063 AP hip radiographs from 550 patients. One network localized the femoral neck and a second classified Garden I/II, Garden III/IV or no fracture. Training data were expanded to 9,063 images with GAN-generated radiographs and digitally reconstructed radiographs (DRRs) from preoperative hip CT.</dd></div>
+            <div><dt>Published finding</dt><dd>On 105 held-out real radiographs, fracture vs. no fracture reached AUC 0.92, accuracy 92.3%, sensitivity 0.91 and specificity 0.93. The three-class task reached AUC 0.96 and accuracy 86.0%.</dd></div>
+            <div><dt>Limitation</dt><dd>Retrospective, single-institution data with a small test set; only 127 real Garden I/II radiographs. A research model, not deployed clinically.</dd></div>
+              <div><dt>Read more</dt><dd class="links"><a href="https://doi.org/10.1007/s10278-020-00364-8">Paper (DOI)</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7572965/">Full text (PMC)</a> <a href="https://www.healthimaging.com/topics/artificial-intelligence/ai-hip-fractures-emergency-radiology-triage">Health Imaging coverage</a></dd></div>
+            </dl>
+          </div>
+          <figure>
+            <svg viewBox="0 0 360 164" role="img" aria-labelledby="t-139878433387904 d-139878433387904"><title id="t-139878433387904">Fracture vs. no fracture AUC by augmentation strategy</title><desc id="d-139878433387904">AUC 0.80 without advanced augmentation, 0.87 with GAN-generated images only, 0.91 with CT-derived DRRs only, and 0.92 with both.</desc><text class="viz-text" x="96" y="28" text-anchor="end">No advanced aug.</text><rect class="viz-bar-2" x="104" y="17" width="169.6" height="16" rx="3"/><text class="viz-text" x="279.6" y="29">0.80</text><text class="viz-text" x="96" y="58" text-anchor="end">GAN only</text><rect class="viz-bar-2" x="104" y="47" width="184.4" height="16" rx="3"/><text class="viz-text" x="294.4" y="59">0.87</text><text class="viz-text" x="96" y="88" text-anchor="end">DRR only</text><rect class="viz-bar-2" x="104" y="77" width="192.9" height="16" rx="3"/><text class="viz-text" x="302.9" y="89">0.91</text><text class="viz-text" x="96" y="118" text-anchor="end">GAN + DRR</text><rect class="viz-bar" x="104" y="107" width="195.0" height="16" rx="3"/><text class="viz-text" x="305.0" y="119">0.92</text><line class="viz-line" x1="104" y1="10" x2="104" y2="134"/><text class="viz-muted" x="104.0" y="150" text-anchor="middle">0</text><text class="viz-muted" x="210.0" y="150" text-anchor="middle">0.50</text><text class="viz-muted" x="316.0" y="150" text-anchor="middle">1.00</text></svg>
+            <figcaption>Two-class AUC on the held-out set, as reported for each augmentation strategy. Axis starts at zero.</figcaption>
+          </figure>
+        </article>
+        <article class="case" id="case-saliency" aria-labelledby="case-saliency-h">
+          <div>
+            <p class="case-tag">AI evaluation · MSK &nbsp;|&nbsp; J Imaging Inform Med 2024 · Co-author (2nd of 5)</p>
+            <h3 id="case-saliency-h">Are saliency maps trustworthy explanations?</h3>
+            <dl>
+            <div><dt>Clinical problem</dt><dd>Heatmaps are widely used to show “where the AI looked,” but their reliability had not been tested on musculoskeletal radiographs.</dd></div>
+            <div><dt>My contribution</dt><dd>Co-author on a Johns Hopkins and University of Maryland study led by Venkatesh (first author) and Yi (senior author).</dd></div>
+            <div><dt>Approach</dt><dd>Networks trained on the public Stanford MURA upper-extremity dataset. Six gradient-based saliency methods were scored on localization, repeatability, reproducibility and sensitivity to model weights, against consensus boxes from three fellowship-trained MSK radiologists.</dd></div>
+            <div><dt>Published finding</dt><dd>Every method localized abnormalities worse than radiologists (AUPRC 0.438–0.590 vs. 0.816) and was less repeatable and reproducible. Five passed the weight-sensitivity test, but none met all four criteria. The authors recommend caution before clinical use.</dd></div>
+            <div><dt>Limitation</dt><dd>One public dataset of upper-extremity radiographs, and gradient-based methods only. Results may differ for other explanation methods, body parts or modalities.</dd></div>
+              <div><dt>Read more</dt><dd class="links"><a href="https://doi.org/10.1007/s10278-024-01136-4">Paper (DOI)</a> <a href="#talks">SIIM 2022 podium presentation</a></dd></div>
+            </dl>
+          </div>
+          <figure>
+            <svg viewBox="0 0 360 188" role="img" aria-labelledby="t-sal d-sal"><title id="t-sal">Saliency methods versus radiologists</title><desc id="d-sal">Localization AUPRC: methods 0.438 to 0.590, radiologists 0.816. Repeatability IoU: methods 0.427 to 0.551, radiologists 0.613. Reproducibility IoU: methods 0.250 to 0.502, radiologists 0.613.</desc><text class="viz-text" x="104" y="26" text-anchor="end">Localization</text><text class="viz-muted" x="104" y="40" text-anchor="end">AUPRC</text><line class="viz-line" x1="112" y1="24" x2="340" y2="24"/><rect class="viz-bar-2" x="211.9" y="18" width="34.7" height="12" rx="6"/><circle class="viz-mark" cx="298.0" cy="24" r="5"/><text class="viz-text" x="104" y="66" text-anchor="end">Repeatability</text><text class="viz-muted" x="104" y="80" text-anchor="end">IoU</text><line class="viz-line" x1="112" y1="64" x2="340" y2="64"/><rect class="viz-bar-2" x="209.4" y="58" width="28.3" height="12" rx="6"/><circle class="viz-mark" cx="251.8" cy="64" r="5"/><text class="viz-text" x="104" y="106" text-anchor="end">Reproducibility</text><text class="viz-muted" x="104" y="120" text-anchor="end">IoU</text><line class="viz-line" x1="112" y1="104" x2="340" y2="104"/><rect class="viz-bar-2" x="169.0" y="98" width="57.5" height="12" rx="6"/><circle class="viz-mark" cx="251.8" cy="104" r="5"/><text class="viz-muted" x="112.0" y="142" text-anchor="middle">0</text><text class="viz-muted" x="226.0" y="142" text-anchor="middle">0.5</text><text class="viz-muted" x="340.0" y="142" text-anchor="middle">1</text><rect class="viz-bar-2" x="112" y="155" width="22" height="10" rx="5"/><text class="viz-muted" x="140" y="164">Six saliency methods (range)</text><circle class="viz-mark" cx="123" cy="176" r="4.5"/><text class="viz-muted" x="140" y="180">Radiologist average</text></svg>
+            <figcaption>Reported ranges across the six methods versus the radiologist average. Higher is better.</figcaption>
+          </figure>
+        </article>
+        <article class="case" id="case-breast-risk" aria-labelledby="case-breast-risk-h">
+          <div>
+            <p class="case-tag">Breast imaging &nbsp;|&nbsp; Acad Radiol 2019 · Co-author (4th of 7)</p>
+            <h3 id="case-breast-risk-h">Breast cancer risk from the mammogram itself</h3>
+            <dl>
+            <div><dt>Clinical problem</dt><dd>Breast density is a coarse risk marker. The question was whether a network reading the whole mammogram could stratify future risk better.</dd></div>
+            <div><dt>My contribution</dt><dd>Co-author in Columbia’s breast imaging AI group, led by Ha (first author) and Jambawalikar (senior author). Columbia’s 2019 CAPRI announcement credits me with helping develop the group’s mammographic risk models, which my NIH StARR-funded resident research year built on.</dd></div>
+            <div><dt>Approach</dt><dd>Retrospective case-control study: prior mammograms of 210 women who later developed cancer (420 images) vs. 527 controls (1,054 images). A fully convolutional network produced a pixel-wise risk map, with an 80/20 split and five-fold cross-validation.</dd></div>
+            <div><dt>Published finding</dt><dd>The network score and breast density were independent predictors. The network’s odds ratio was 4.42 (95% CI 3.4–5.7) vs. 1.67 (1.4–1.9) for density, with 72% accuracy in identifying the case group.</dd></div>
+            <div><dt>Limitation</dt><dd>Single institution, retrospective and relatively small. The authors expected more data to improve the model. A research model.</dd></div>
+              <div><dt>Read more</dt><dd class="links"><a href="https://doi.org/10.1016/j.acra.2018.06.020">Paper (DOI)</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8114104/">Full text (PMC)</a> <a href="https://www.columbiaradiology.org/news/dr-simukayi-mutasa-receives-grant-columbia-cancer-training-program-resident-investigators-capri">CAPRI award announcement</a></dd></div>
+            </dl>
+          </div>
+          <figure>
+            <svg viewBox="0 0 360 152" role="img" aria-labelledby="t-or d-or"><title id="t-or">Odds ratios for later breast cancer</title><desc id="d-or">CNN pixel-wise risk score odds ratio 4.42 (95% CI 3.4 to 5.7); breast density odds ratio 1.67 (95% CI 1.4 to 1.9). Reference line at 1.</desc><line class="viz-arrow" x1="148.3" y1="14" x2="148.3" y2="110" stroke-dasharray="3 3"/><text class="viz-text" x="102" y="40" text-anchor="end">CNN risk score</text><line class="viz-arrow" x1="240.3" y1="36" x2="328.5" y2="36" style="stroke-width:2"/><rect class="viz-bar" x="273.4" y="30" width="12" height="12" rx="2"/><text class="viz-muted" x="279.4" y="24" text-anchor="middle">4.42 (3.4–5.7)</text><text class="viz-text" x="102" y="86" text-anchor="end">Breast density</text><line class="viz-arrow" x1="163.7" y1="82" x2="182.8" y2="82" style="stroke-width:2"/><rect class="viz-bar-2" x="168.0" y="76" width="12" height="12" rx="2"/><text class="viz-muted" x="174.0" y="70" text-anchor="middle">1.67 (1.4–1.9)</text><text class="viz-muted" x="110.0" y="128" text-anchor="middle">0</text><text class="viz-muted" x="148.3" y="128" text-anchor="middle">1</text><text class="viz-muted" x="186.7" y="128" text-anchor="middle">2</text><text class="viz-muted" x="263.3" y="128" text-anchor="middle">4</text><text class="viz-muted" x="340.0" y="128" text-anchor="middle">6</text><text class="viz-muted" x="110" y="144">Odds ratio (95% CI); dashed line = no association</text></svg>
+            <figcaption>Multivariate odds ratios as published.</figcaption>
+          </figure>
+        </article>
+        </div>
+      </section>
+
       <!-- ================= PUBLICATIONS ================= -->
       <section class="rec" id="publications">
         <p class="eyebrow">Peer-reviewed</p>
         <h2>Journal publications</h2>
         <p class="count">38 articles. Full author lists are available via each DOI.</p>
+        <div class="filters" role="group" aria-label="Filter publications by topic" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="msk" aria-pressed="false">MSK</button>
+          <button type="button" data-filter="breast" aria-pressed="false">Breast imaging</button>
+          <button type="button" data-filter="other" aria-pressed="false">Other imaging</button>
+          <button type="button" data-filter="eval" aria-pressed="false">AI evaluation &amp; education</button>
+        </div>
+        <p class="filter-status" role="status" aria-live="polite"></p>
 
-        <p class="year">2024</p>
+        <div class="pub-year"><p class="year">2024</p>
         <ul class="cites">
-          <li><span class="t">Effects of vitamin D supplementation on a deep learning-based mammographic evaluation in SWOG S0812.</span>McGuinness JE, Anderson GL, <b>Mutasa S</b>, et al. <em>JNCI Cancer Spectr</em>. 2024. <a href="https://doi.org/10.1093/jncics/pkae042">doi</a></li>
-          <li><span class="t">Gradient-based saliency maps are not trustworthy visual explanations of automated AI musculoskeletal diagnoses.</span>Venkatesh K, <b>Mutasa S</b>, Moore F, Sulam J, Yi PH. <em>J Imaging Inform Med</em>. 2024. <a href="https://doi.org/10.1007/s10278-024-01136-4">doi</a></li>
-          <li><span class="t">Deep learning to detect left ventricular structural abnormalities in chest X-rays.</span>Bhave S, Rodriguez V, Poterucha T, <b>Mutasa S</b>, et al. <em>Eur Heart J</em>. 2024. <a href="https://doi.org/10.1093/eurheartj/ehad782">doi</a></li>
-          <li><span class="t">Deep learning-assisted diffusion tensor imaging for evaluation of the physis and metaphysis.</span>Duong PT, Santos L, Hsu HY, Jambawalikar S, <b>Mutasa S</b>, Nguyen MK, Guariento A, Jaramillo D. <em>J Imaging Inform Med</em>. 2024. <a href="https://doi.org/10.1007/s10278-024-00993-3">doi</a></li>
-          <li><span class="t">Deep learning-assisted identification of femoroacetabular impingement (FAI) on routine pelvic radiographs.</span>Hoy MK, Desai V, <b>Mutasa S</b>, Hoy RC, Gorniak R, Belair JA. <em>J Imaging Inform Med</em>. 2024. <a href="https://doi.org/10.1007/s10278-023-00920-y">doi</a></li>
-        </ul>
+          <li data-topics="breast"><span class="t">Effects of vitamin D supplementation on a deep learning-based mammographic evaluation in SWOG S0812.</span>McGuinness JE, Anderson GL, <b>Mutasa S</b>, et al. <em>JNCI Cancer Spectr</em>. 2024. <a href="https://doi.org/10.1093/jncics/pkae042">DOI<span class="sr-only"> for “Effects of vitamin D supplementation on a deep learning-based mammographic evaluation in SWOG S0812”</span></a></li>
+          <li data-topics="msk eval"><span class="t">Gradient-based saliency maps are not trustworthy visual explanations of automated AI musculoskeletal diagnoses.</span>Venkatesh K, <b>Mutasa S</b>, Moore F, Sulam J, Yi PH. <em>J Imaging Inform Med</em>. 2024. <a href="https://doi.org/10.1007/s10278-024-01136-4">DOI<span class="sr-only"> for “Gradient-based saliency maps are not trustworthy visual explanations of automated AI musculoskeletal diagnoses”</span></a></li>
+          <li data-topics="other"><span class="t">Deep learning to detect left ventricular structural abnormalities in chest X-rays.</span>Bhave S, Rodriguez V, Poterucha T, <b>Mutasa S</b>, et al. <em>Eur Heart J</em>. 2024. <a href="https://doi.org/10.1093/eurheartj/ehad782">DOI<span class="sr-only"> for “Deep learning to detect left ventricular structural abnormalities in chest X-rays”</span></a></li>
+          <li data-topics="msk"><span class="t">Deep learning-assisted diffusion tensor imaging for evaluation of the physis and metaphysis.</span>Duong PT, Santos L, Hsu HY, Jambawalikar S, <b>Mutasa S</b>, Nguyen MK, Guariento A, Jaramillo D. <em>J Imaging Inform Med</em>. 2024. <a href="https://doi.org/10.1007/s10278-024-00993-3">DOI<span class="sr-only"> for “Deep learning-assisted diffusion tensor imaging for evaluation of the physis and metaphysis”</span></a></li>
+          <li data-topics="msk"><span class="t">Deep learning-assisted identification of femoroacetabular impingement (FAI) on routine pelvic radiographs.</span>Hoy MK, Desai V, <b>Mutasa S</b>, Hoy RC, Gorniak R, Belair JA. <em>J Imaging Inform Med</em>. 2024. <a href="https://doi.org/10.1007/s10278-023-00920-y">DOI<span class="sr-only"> for “Deep learning-assisted identification of femoroacetabular impingement (FAI) on routine pelvic radiographs”</span></a></li>
+        </ul></div>
 
-        <p class="year">2023</p>
+        <div class="pub-year"><p class="year">2023</p>
         <ul class="cites">
-          <li><span class="t">Breast cancer risk prediction combining a convolutional neural network-based mammographic evaluation with clinical factors.</span>Michel A, Ro V, McGuinness JE, <b>Mutasa S</b>, et al. <em>Breast Cancer Res Treat</em>. 2023. <a href="https://doi.org/10.1007/s10549-023-06966-4">doi</a></li>
-        </ul>
+          <li data-topics="breast"><span class="t">Breast cancer risk prediction combining a convolutional neural network-based mammographic evaluation with clinical factors.</span>Michel A, Ro V, McGuinness JE, <b>Mutasa S</b>, et al. <em>Breast Cancer Res Treat</em>. 2023. <a href="https://doi.org/10.1007/s10549-023-06966-4">DOI<span class="sr-only"> for “Breast cancer risk prediction combining a convolutional neural network-based mammographic evaluation with clinical factors”</span></a></li>
+        </ul></div>
 
-        <p class="year">2022</p>
+        <div class="pub-year"><p class="year">2022</p>
         <ul class="cites">
-          <li><span class="t">Use of a convolutional neural network-based mammographic evaluation to predict breast cancer recurrence among women with hormone receptor-positive operable breast cancer.</span>McGuinness JE, Ro V, <b>Mutasa S</b>, et al. <em>Breast Cancer Res Treat</em>. 2022;194(1):35-47. <a href="https://doi.org/10.1007/s10549-022-06614-3">doi</a></li>
-          <li><span class="t">Deep learning prediction of axillary lymph node status using ultrasound images.</span>Sun S, <b>Mutasa S</b>, Liu MZ, et al. <em>Comput Biol Med</em>. 2022;143:105250. <a href="https://doi.org/10.1016/j.compbiomed.2022.105250">doi</a></li>
-        </ul>
+          <li data-topics="breast"><span class="t">Use of a convolutional neural network-based mammographic evaluation to predict breast cancer recurrence among women with hormone receptor-positive operable breast cancer.</span>McGuinness JE, Ro V, <b>Mutasa S</b>, et al. <em>Breast Cancer Res Treat</em>. 2022;194(1):35-47. <a href="https://doi.org/10.1007/s10549-022-06614-3">DOI<span class="sr-only"> for “Use of a convolutional neural network-based mammographic evaluation to predict breast cancer recurrence among women with hormone receptor-positive operable breast cancer”</span></a></li>
+          <li data-topics="breast"><span class="t">Deep learning prediction of axillary lymph node status using ultrasound images.</span>Sun S, <b>Mutasa S</b>, Liu MZ, et al. <em>Comput Biol Med</em>. 2022;143:105250. <a href="https://doi.org/10.1016/j.compbiomed.2022.105250">DOI<span class="sr-only"> for “Deep learning prediction of axillary lymph node status using ultrasound images”</span></a></li>
+        </ul></div>
 
-        <p class="year">2021</p>
+        <div class="pub-year"><p class="year">2021</p>
         <ul class="cites">
-          <li><span class="t">Clinical artificial intelligence applications: musculoskeletal.</span><b>Mutasa S</b>, Yi PH. <em>Radiol Clin North Am</em>. 2021;59(6):1013-1026. <a href="https://doi.org/10.1016/j.rcl.2021.07.011">doi</a></li>
-          <li><span class="t">AI MSK clinical applications: orthopedic implants.</span>Yi PH, <b>Mutasa S</b>, Fritz J. <em>Skeletal Radiol</em>. 2021. <a href="https://doi.org/10.1007/s00256-021-03879-5">doi</a></li>
-          <li><span class="t">Understanding artificial intelligence based radiology studies: CNN architecture.</span><b>Mutasa S</b>, Sun S, Ha R. <em>Clin Imaging</em>. 2021;80:72-76. <a href="https://doi.org/10.1016/j.clinimag.2021.06.033">doi</a></li>
-          <li><span class="t">Deciphering musculoskeletal artificial intelligence for clinical applications: how do I get started?</span><b>Mutasa S</b>, Yi PH. <em>Skeletal Radiol</em>. 2021. <a href="https://doi.org/10.1007/s00256-021-03850-4">doi</a></li>
-          <li><span class="t">Deep learning of computed tomography virtual wedge resection for prediction of histologic usual interstitial pneumonitis.</span>Shaish H, Ahmed FS, Lederer D, et al., <b>Mutasa S</b>. <em>Ann Am Thorac Soc</em>. 2021;18(1):51-59. <a href="https://doi.org/10.1513/AnnalsATS.202001-068OC">doi</a></li>
-        </ul>
+          <li data-topics="msk eval"><span class="t">Clinical artificial intelligence applications: musculoskeletal.</span><b>Mutasa S</b>, Yi PH. <em>Radiol Clin North Am</em>. 2021;59(6):1013-1026. <a href="https://doi.org/10.1016/j.rcl.2021.07.011">DOI<span class="sr-only"> for “Clinical artificial intelligence applications: musculoskeletal”</span></a></li>
+          <li data-topics="msk eval"><span class="t">AI MSK clinical applications: orthopedic implants.</span>Yi PH, <b>Mutasa S</b>, Fritz J. <em>Skeletal Radiol</em>. 2021. <a href="https://doi.org/10.1007/s00256-021-03879-5">DOI<span class="sr-only"> for “AI MSK clinical applications: orthopedic implants”</span></a></li>
+          <li data-topics="eval"><span class="t">Understanding artificial intelligence based radiology studies: CNN architecture.</span><b>Mutasa S</b>, Sun S, Ha R. <em>Clin Imaging</em>. 2021;80:72-76. <a href="https://doi.org/10.1016/j.clinimag.2021.06.033">DOI<span class="sr-only"> for “Understanding artificial intelligence based radiology studies: CNN architecture”</span></a></li>
+          <li data-topics="msk eval"><span class="t">Deciphering musculoskeletal artificial intelligence for clinical applications: how do I get started?</span><b>Mutasa S</b>, Yi PH. <em>Skeletal Radiol</em>. 2021. <a href="https://doi.org/10.1007/s00256-021-03850-4">DOI<span class="sr-only"> for “Deciphering musculoskeletal artificial intelligence for clinical applications: how do I get started?”</span></a></li>
+          <li data-topics="other"><span class="t">Deep learning of computed tomography virtual wedge resection for prediction of histologic usual interstitial pneumonitis.</span>Shaish H, Ahmed FS, Lederer D, et al., <b>Mutasa S</b>. <em>Ann Am Thorac Soc</em>. 2021;18(1):51-59. <a href="https://doi.org/10.1513/AnnalsATS.202001-068OC">DOI<span class="sr-only"> for “Deep learning of computed tomography virtual wedge resection for prediction of histologic usual interstitial pneumonitis”</span></a></li>
+        </ul></div>
 
-        <p class="year">2020</p>
+        <div class="pub-year"><p class="year">2020</p>
         <ul class="cites">
-          <li><span class="t">Dynamic changes of convolutional neural network-based mammographic breast cancer risk score among women undergoing chemoprevention treatment.</span>Manley H, <b>Mutasa S</b>, Chang P, et al. <em>Clin Breast Cancer</em>. 2020. <a href="https://doi.org/10.1016/j.clbc.2020.11.007">doi</a></li>
-          <li><span class="t">Development and external validation of a prognostic tool for COVID-19 critical disease.</span>Chow DS, Glavis-Bloom J, Soun JE, et al., <b>Mutasa S</b>, et al. <em>PLoS One</em>. 2020;15(12):e0242953. <a href="https://doi.org/10.1371/journal.pone.0242953">doi</a></li>
-          <li><span class="t">A novel CNN algorithm for pathological complete response prediction using an I-SPY TRIAL breast MRI database.</span>Liu MZ, <b>Mutasa S</b>, Chang P, et al. <em>Magn Reson Imaging</em>. 2020;73:148-151. <a href="https://doi.org/10.1016/j.mri.2020.08.021">doi</a></li>
-          <li><span class="t">Advanced deep learning techniques applied to automated femoral neck fracture detection and classification.</span><b>Mutasa S</b>, Varada S, Goel A, Wong TT, Rasiej MJ. <em>J Digit Imaging</em>. 2020;33(5):1209-1217. <a href="https://doi.org/10.1007/s10278-020-00364-8">doi</a></li>
-          <li><span class="t">Prospective analysis using a novel CNN algorithm to distinguish atypical ductal hyperplasia from ductal carcinoma in situ in breast.</span><b>Mutasa S</b>, Chang P, Nemer J, et al. <em>Clin Breast Cancer</em>. 2020;20(6):e757-e760. <a href="https://doi.org/10.1016/j.clbc.2020.06.001">doi</a></li>
-          <li><span class="t">Rethinking Greulich and Pyle: a deep learning approach to pediatric bone age assessment using pediatric trauma hand radiographs.</span>Pan I, Baird GL, <b>Mutasa S</b>, et al. <em>Radiol Artif Intell</em>. 2020;2(4):e190198. <a href="https://doi.org/10.1148/ryai.2020190198">doi</a></li>
-          <li><span class="t">Channel width optimized neural networks for liver and vessel segmentation in liver iron quantification.</span>Liu M, Vanguri R, <b>Mutasa S</b>, et al. <em>Comput Biol Med</em>. 2020;122:103798. <a href="https://doi.org/10.1016/j.compbiomed.2020.103798">doi</a></li>
-          <li><span class="t">Understanding artificial intelligence based radiology studies: what is overfitting?</span><b>Mutasa S</b>, Sun S, Ha R. <em>Clin Imaging</em>. 2020;65:96-99. <a href="https://doi.org/10.1016/j.clinimag.2020.04.025">doi</a></li>
-          <li><span class="t">Fully automated segmentation algorithm for perihematomal edema volumetry after spontaneous intracerebral hemorrhage.</span>Ironside N, Chen CJ, <b>Mutasa S</b>, et al. <em>Stroke</em>. 2020;51(3):815-823. <a href="https://doi.org/10.1161/STROKEAHA.119.026764">doi</a></li>
-          <li><span class="t">Potential role of convolutional neural network based algorithm in patient selection for DCIS observation trials using a mammogram dataset.</span><b>Mutasa S</b>, Chang P, Van Sant EP, et al. <em>Acad Radiol</em>. 2020;27(6):774-779. <a href="https://doi.org/10.1016/j.acra.2019.08.012">doi</a></li>
-        </ul>
+          <li data-topics="breast"><span class="t">Dynamic changes of convolutional neural network-based mammographic breast cancer risk score among women undergoing chemoprevention treatment.</span>Manley H, <b>Mutasa S</b>, Chang P, et al. <em>Clin Breast Cancer</em>. 2020. <a href="https://doi.org/10.1016/j.clbc.2020.11.007">DOI<span class="sr-only"> for “Dynamic changes of convolutional neural network-based mammographic breast cancer risk score among women undergoing chemoprevention treatment”</span></a></li>
+          <li data-topics="other"><span class="t">Development and external validation of a prognostic tool for COVID-19 critical disease.</span>Chow DS, Glavis-Bloom J, Soun JE, et al., <b>Mutasa S</b>, et al. <em>PLoS One</em>. 2020;15(12):e0242953. <a href="https://doi.org/10.1371/journal.pone.0242953">DOI<span class="sr-only"> for “Development and external validation of a prognostic tool for COVID-19 critical disease”</span></a></li>
+          <li data-topics="breast"><span class="t">A novel CNN algorithm for pathological complete response prediction using an I-SPY TRIAL breast MRI database.</span>Liu MZ, <b>Mutasa S</b>, Chang P, et al. <em>Magn Reson Imaging</em>. 2020;73:148-151. <a href="https://doi.org/10.1016/j.mri.2020.08.021">DOI<span class="sr-only"> for “A novel CNN algorithm for pathological complete response prediction using an I-SPY TRIAL breast MRI database”</span></a></li>
+          <li data-topics="msk"><span class="t">Advanced deep learning techniques applied to automated femoral neck fracture detection and classification.</span><b>Mutasa S</b>, Varada S, Goel A, Wong TT, Rasiej MJ. <em>J Digit Imaging</em>. 2020;33(5):1209-1217. <a href="https://doi.org/10.1007/s10278-020-00364-8">DOI<span class="sr-only"> for “Advanced deep learning techniques applied to automated femoral neck fracture detection and classification”</span></a></li>
+          <li data-topics="breast"><span class="t">Prospective analysis using a novel CNN algorithm to distinguish atypical ductal hyperplasia from ductal carcinoma in situ in breast.</span><b>Mutasa S</b>, Chang P, Nemer J, et al. <em>Clin Breast Cancer</em>. 2020;20(6):e757-e760. <a href="https://doi.org/10.1016/j.clbc.2020.06.001">DOI<span class="sr-only"> for “Prospective analysis using a novel CNN algorithm to distinguish atypical ductal hyperplasia from ductal carcinoma in situ in breast”</span></a></li>
+          <li data-topics="msk"><span class="t">Rethinking Greulich and Pyle: a deep learning approach to pediatric bone age assessment using pediatric trauma hand radiographs.</span>Pan I, Baird GL, <b>Mutasa S</b>, et al. <em>Radiol Artif Intell</em>. 2020;2(4):e190198. <a href="https://doi.org/10.1148/ryai.2020190198">DOI<span class="sr-only"> for “Rethinking Greulich and Pyle: a deep learning approach to pediatric bone age assessment using pediatric trauma hand radiographs”</span></a></li>
+          <li data-topics="other"><span class="t">Channel width optimized neural networks for liver and vessel segmentation in liver iron quantification.</span>Liu M, Vanguri R, <b>Mutasa S</b>, et al. <em>Comput Biol Med</em>. 2020;122:103798. <a href="https://doi.org/10.1016/j.compbiomed.2020.103798">DOI<span class="sr-only"> for “Channel width optimized neural networks for liver and vessel segmentation in liver iron quantification”</span></a></li>
+          <li data-topics="eval"><span class="t">Understanding artificial intelligence based radiology studies: what is overfitting?</span><b>Mutasa S</b>, Sun S, Ha R. <em>Clin Imaging</em>. 2020;65:96-99. <a href="https://doi.org/10.1016/j.clinimag.2020.04.025">DOI<span class="sr-only"> for “Understanding artificial intelligence based radiology studies: what is overfitting?”</span></a></li>
+          <li data-topics="other"><span class="t">Fully automated segmentation algorithm for perihematomal edema volumetry after spontaneous intracerebral hemorrhage.</span>Ironside N, Chen CJ, <b>Mutasa S</b>, et al. <em>Stroke</em>. 2020;51(3):815-823. <a href="https://doi.org/10.1161/STROKEAHA.119.026764">DOI<span class="sr-only"> for “Fully automated segmentation algorithm for perihematomal edema volumetry after spontaneous intracerebral hemorrhage”</span></a></li>
+          <li data-topics="breast"><span class="t">Potential role of convolutional neural network based algorithm in patient selection for DCIS observation trials using a mammogram dataset.</span><b>Mutasa S</b>, Chang P, Van Sant EP, et al. <em>Acad Radiol</em>. 2020;27(6):774-779. <a href="https://doi.org/10.1016/j.acra.2019.08.012">DOI<span class="sr-only"> for “Potential role of convolutional neural network based algorithm in patient selection for DCIS observation trials using a mammogram dataset”</span></a></li>
+        </ul></div>
 
-        <p class="year">2019</p>
+        <div class="pub-year"><p class="year">2019</p>
         <ul class="cites">
-          <li><span class="t">Fully automated segmentation algorithm for hematoma volumetric analysis in spontaneous intracerebral hemorrhage.</span>Ironside N, Chen CJ, <b>Mutasa S</b>, et al. <em>Stroke</em>. 2019;50(12):3416-3423. <a href="https://doi.org/10.1161/STROKEAHA.119.026561">doi</a></li>
-          <li><span class="t">Global trend in artificial intelligence-based publications in radiology from 2000 to 2018.</span>West E, <b>Mutasa S</b>, Zhu Z, Ha R. <em>AJR Am J Roentgenol</em>. 2019;213(6):1204-1206. <a href="https://doi.org/10.2214/AJR.19.21346">doi</a></li>
-          <li><span class="t">Prior to initiation of chemotherapy, can we predict breast tumor response? Deep learning convolutional neural networks approach using a breast MRI tumor dataset.</span>Ha R, Chin C, Karcich J, et al., <b>Mutasa S</b>, et al. <em>J Digit Imaging</em>. 2019;32(5):693-701. <a href="https://doi.org/10.1007/s10278-018-0144-1">doi</a></li>
-          <li><span class="t">Eye tracking for deep learning segmentation using convolutional neural networks.</span>Stember JN, Celik H, Krupinski E, Chang PD, <b>Mutasa S</b>, et al. <em>J Digit Imaging</em>. 2019;32(4):597-604. <a href="https://doi.org/10.1007/s10278-019-00220-4">doi</a></li>
-          <li><span class="t">Accuracy of distinguishing atypical ductal hyperplasia from ductal carcinoma in situ with convolutional neural network-based machine learning approach using mammographic image data.</span>Ha R, <b>Mutasa S</b>, Sant EPV, et al. <em>AJR Am J Roentgenol</em>. 2019. <a href="https://doi.org/10.2214/AJR.18.20250">doi</a></li>
-          <li><span class="t">Predicting breast cancer molecular subtype with MRI dataset utilizing convolutional neural network algorithm.</span>Ha R, <b>Mutasa S</b>, Karcich J, et al. <em>J Digit Imaging</em>. 2019;32(2):276-282. <a href="https://doi.org/10.1007/s10278-019-00179-2">doi</a></li>
-          <li><span class="t">Prediction of lymph node maximum standardized uptake value in patients with cancer using a 3D convolutional neural network: a proof-of-concept study.</span>Shaish H, <b>Mutasa S</b>, Makkar J, et al. <em>AJR Am J Roentgenol</em>. 2019;212(2):238-244. <a href="https://doi.org/10.2214/AJR.18.20094">doi</a></li>
-          <li><span class="t">Convolutional neural network using a breast MRI tumor dataset can predict Oncotype Dx recurrence score.</span>Ha R, Chang P, <b>Mutasa S</b>, et al. <em>J Magn Reson Imaging</em>. 2019;49(2):518-524. <a href="https://doi.org/10.1002/jmri.26244">doi</a></li>
-          <li><span class="t">Fully automated convolutional neural network method for quantification of breast MRI fibroglandular tissue and background parenchymal enhancement.</span>Ha R, Chang P, Mema E, <b>Mutasa S</b>, et al. <em>J Digit Imaging</em>. 2019;32(1):141-147. <a href="https://doi.org/10.1007/s10278-018-0114-7">doi</a></li>
-          <li><span class="t">Convolutional neural network based breast cancer risk stratification using a mammographic dataset.</span>Ha R, Chang P, Karcich J, <b>Mutasa S</b>, et al. <em>Acad Radiol</em>. 2019;26(4):544-549. <a href="https://doi.org/10.1016/j.acra.2018.06.020">doi</a></li>
-        </ul>
+          <li data-topics="other"><span class="t">Fully automated segmentation algorithm for hematoma volumetric analysis in spontaneous intracerebral hemorrhage.</span>Ironside N, Chen CJ, <b>Mutasa S</b>, et al. <em>Stroke</em>. 2019;50(12):3416-3423. <a href="https://doi.org/10.1161/STROKEAHA.119.026561">DOI<span class="sr-only"> for “Fully automated segmentation algorithm for hematoma volumetric analysis in spontaneous intracerebral hemorrhage”</span></a></li>
+          <li data-topics="eval"><span class="t">Global trend in artificial intelligence-based publications in radiology from 2000 to 2018.</span>West E, <b>Mutasa S</b>, Zhu Z, Ha R. <em>AJR Am J Roentgenol</em>. 2019;213(6):1204-1206. <a href="https://doi.org/10.2214/AJR.19.21346">DOI<span class="sr-only"> for “Global trend in artificial intelligence-based publications in radiology from 2000 to 2018”</span></a></li>
+          <li data-topics="breast"><span class="t">Prior to initiation of chemotherapy, can we predict breast tumor response? Deep learning convolutional neural networks approach using a breast MRI tumor dataset.</span>Ha R, Chin C, Karcich J, et al., <b>Mutasa S</b>, et al. <em>J Digit Imaging</em>. 2019;32(5):693-701. <a href="https://doi.org/10.1007/s10278-018-0144-1">DOI<span class="sr-only"> for “Prior to initiation of chemotherapy, can we predict breast tumor response? Deep learning convolutional neural networks approach using a breast MRI tumor dataset”</span></a></li>
+          <li data-topics="other"><span class="t">Eye tracking for deep learning segmentation using convolutional neural networks.</span>Stember JN, Celik H, Krupinski E, Chang PD, <b>Mutasa S</b>, et al. <em>J Digit Imaging</em>. 2019;32(4):597-604. <a href="https://doi.org/10.1007/s10278-019-00220-4">DOI<span class="sr-only"> for “Eye tracking for deep learning segmentation using convolutional neural networks”</span></a></li>
+          <li data-topics="breast"><span class="t">Accuracy of distinguishing atypical ductal hyperplasia from ductal carcinoma in situ with convolutional neural network-based machine learning approach using mammographic image data.</span>Ha R, <b>Mutasa S</b>, Sant EPV, et al. <em>AJR Am J Roentgenol</em>. 2019. <a href="https://doi.org/10.2214/AJR.18.20250">DOI<span class="sr-only"> for “Accuracy of distinguishing atypical ductal hyperplasia from ductal carcinoma in situ with convolutional neural network-based machine learning approach using mammographic image data”</span></a></li>
+          <li data-topics="breast"><span class="t">Predicting breast cancer molecular subtype with MRI dataset utilizing convolutional neural network algorithm.</span>Ha R, <b>Mutasa S</b>, Karcich J, et al. <em>J Digit Imaging</em>. 2019;32(2):276-282. <a href="https://doi.org/10.1007/s10278-019-00179-2">DOI<span class="sr-only"> for “Predicting breast cancer molecular subtype with MRI dataset utilizing convolutional neural network algorithm”</span></a></li>
+          <li data-topics="other"><span class="t">Prediction of lymph node maximum standardized uptake value in patients with cancer using a 3D convolutional neural network: a proof-of-concept study.</span>Shaish H, <b>Mutasa S</b>, Makkar J, et al. <em>AJR Am J Roentgenol</em>. 2019;212(2):238-244. <a href="https://doi.org/10.2214/AJR.18.20094">DOI<span class="sr-only"> for “Prediction of lymph node maximum standardized uptake value in patients with cancer using a 3D convolutional neural network: a proof-of-concept study”</span></a></li>
+          <li data-topics="breast"><span class="t">Convolutional neural network using a breast MRI tumor dataset can predict Oncotype Dx recurrence score.</span>Ha R, Chang P, <b>Mutasa S</b>, et al. <em>J Magn Reson Imaging</em>. 2019;49(2):518-524. <a href="https://doi.org/10.1002/jmri.26244">DOI<span class="sr-only"> for “Convolutional neural network using a breast MRI tumor dataset can predict Oncotype Dx recurrence score”</span></a></li>
+          <li data-topics="breast"><span class="t">Fully automated convolutional neural network method for quantification of breast MRI fibroglandular tissue and background parenchymal enhancement.</span>Ha R, Chang P, Mema E, <b>Mutasa S</b>, et al. <em>J Digit Imaging</em>. 2019;32(1):141-147. <a href="https://doi.org/10.1007/s10278-018-0114-7">DOI<span class="sr-only"> for “Fully automated convolutional neural network method for quantification of breast MRI fibroglandular tissue and background parenchymal enhancement”</span></a></li>
+          <li data-topics="breast"><span class="t">Convolutional neural network based breast cancer risk stratification using a mammographic dataset.</span>Ha R, Chang P, Karcich J, <b>Mutasa S</b>, et al. <em>Acad Radiol</em>. 2019;26(4):544-549. <a href="https://doi.org/10.1016/j.acra.2018.06.020">DOI<span class="sr-only"> for “Convolutional neural network based breast cancer risk stratification using a mammographic dataset”</span></a></li>
+        </ul></div>
 
-        <p class="year">2018</p>
+        <div class="pub-year"><p class="year">2018</p>
         <ul class="cites">
-          <li><span class="t">Predicting post neoadjuvant axillary response using a novel convolutional neural network algorithm.</span>Ha R, Chang P, Karcich J, <b>Mutasa S</b>, et al. <em>Ann Surg Oncol</em>. 2018;25(10):3037-3043. <a href="https://doi.org/10.1245/s10434-018-6613-4">doi</a></li>
-          <li><span class="t">Axillary lymph node evaluation utilizing convolutional neural networks using MRI dataset.</span>Ha R, Chang P, Karcich J, <b>Mutasa S</b>, et al. <em>J Digit Imaging</em>. 2018;31(6):851-856. <a href="https://doi.org/10.1007/s10278-018-0086-7">doi</a></li>
-          <li><span class="t">MABAL: a novel deep-learning architecture for machine-assisted bone age labeling.</span><b>Mutasa S</b>, Chang PD, Ruzal-Shapiro C, Ayyala R. <em>J Digit Imaging</em>. 2018;31(4):513-519. <a href="https://doi.org/10.1007/s10278-018-0053-3">doi</a></li>
-        </ul>
+          <li data-topics="breast"><span class="t">Predicting post neoadjuvant axillary response using a novel convolutional neural network algorithm.</span>Ha R, Chang P, Karcich J, <b>Mutasa S</b>, et al. <em>Ann Surg Oncol</em>. 2018;25(10):3037-3043. <a href="https://doi.org/10.1245/s10434-018-6613-4">DOI<span class="sr-only"> for “Predicting post neoadjuvant axillary response using a novel convolutional neural network algorithm”</span></a></li>
+          <li data-topics="breast"><span class="t">Axillary lymph node evaluation utilizing convolutional neural networks using MRI dataset.</span>Ha R, Chang P, Karcich J, <b>Mutasa S</b>, et al. <em>J Digit Imaging</em>. 2018;31(6):851-856. <a href="https://doi.org/10.1007/s10278-018-0086-7">DOI<span class="sr-only"> for “Axillary lymph node evaluation utilizing convolutional neural networks using MRI dataset”</span></a></li>
+          <li data-topics="msk"><span class="t">MABAL: a novel deep-learning architecture for machine-assisted bone age labeling.</span><b>Mutasa S</b>, Chang PD, Ruzal-Shapiro C, Ayyala R. <em>J Digit Imaging</em>. 2018;31(4):513-519. <a href="https://doi.org/10.1007/s10278-018-0053-3">DOI<span class="sr-only"> for “MABAL: a novel deep-learning architecture for machine-assisted bone age labeling”</span></a></li>
+        </ul></div>
 
-        <p class="year">2017 &amp; earlier</p>
+        <div class="pub-year"><p class="year">2017 &amp; earlier</p>
         <ul class="cites">
-          <li><span class="t">Images in COPD: bullous emphysema with mycetoma.</span><b>Mutasa S</b>. <em>Chronic Obstr Pulm Dis</em>. 2017;4(2):168-171. <a href="https://doi.org/10.15326/jcopdf.4.2.2017.0144">doi</a></li>
-          <li><span class="t">Genetic dysregulation in recurrent respiratory papillomatosis.</span>Rodman R, <b>Mutasa S</b>, Dupuis C, Spratt H, Underbrink M. <em>Laryngoscope</em>. 2014;124(8):E320-5. <a href="https://doi.org/10.1002/lary.24602">doi</a></li>
-        </ul>
+          <li data-topics="other"><span class="t">Images in COPD: bullous emphysema with mycetoma.</span><b>Mutasa S</b>. <em>Chronic Obstr Pulm Dis</em>. 2017;4(2):168-171. <a href="https://doi.org/10.15326/jcopdf.4.2.2017.0144">DOI<span class="sr-only"> for “Images in COPD: bullous emphysema with mycetoma”</span></a></li>
+          <li data-topics="other"><span class="t">Genetic dysregulation in recurrent respiratory papillomatosis.</span>Rodman R, <b>Mutasa S</b>, Dupuis C, Spratt H, Underbrink M. <em>Laryngoscope</em>. 2014;124(8):E320-5. <a href="https://doi.org/10.1002/lary.24602">DOI<span class="sr-only"> for “Genetic dysregulation in recurrent respiratory papillomatosis”</span></a></li>
+        </ul></div>
       </section>
 
       <!-- ================= TALKS ================= -->
@@ -252,6 +360,5 @@
       <p>© <span id="yr">2026</span> Simukayi Mutasa, MD · Ugen Imaging LLC</p>
     </div>
   </footer>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>

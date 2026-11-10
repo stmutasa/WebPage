@@ -6,19 +6,28 @@
   <title>Simukayi Mutasa, MD</title>
   <meta name="description" content="Simukayi “Simi” Mutasa, MD: board-certified musculoskeletal radiologist, imaging-AI researcher, and founder of Ugen Imaging LLC in New York.">
   <meta name="theme-color" content="#0e1829">
-  <link rel="canonical" href="https://stmutasa.github.io/WebPage/">
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="Simukayi “Simi” Mutasa, MD">
-  <meta property="og:description" content="Musculoskeletal Radiologist · Founder, Ugen Imaging LLC">
-  <meta property="og:url" content="https://stmutasa.github.io/WebPage/">
-  <meta property="og:image" content="https://stmutasa.github.io/WebPage/assets/headshot.jpg">
-  <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e1829'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='27' fill='%23d4bb84' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E">
   <link rel="apple-touch-icon" href="assets/headshot.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://stmutasa.github.io/WebPage/">
+  <meta property="og:site_name" content="Simukayi Mutasa, MD">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Simukayi “Simi” Mutasa, MD">
+  <meta property="og:description" content="Musculoskeletal radiologist and founder of Ugen Imaging LLC. Multistate teleradiology, imaging-AI research and private software projects.">
+  <meta property="og:url" content="https://stmutasa.github.io/WebPage/">
+  <meta property="og:image" content="https://stmutasa.github.io/WebPage/assets/og/home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@docsimimd">
+  <meta name="twitter:title" content="Simukayi “Simi” Mutasa, MD">
+  <meta name="twitter:description" content="Musculoskeletal radiologist and founder of Ugen Imaging LLC. Multistate teleradiology, imaging-AI research and private software projects.">
+  <meta name="twitter:image" content="https://stmutasa.github.io/WebPage/assets/og/home.png">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="site.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,12 +55,15 @@
 
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="mark" href="#top" aria-label="Home">S<span>·</span>M</a>
+      <a class="mark" href="./" aria-label="Simukayi Mutasa, MD: home">S<span>·</span>M</a>
       <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="research.html">Research</a>
-        <a class="nav-pill" href="#connect">Connect</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="./#practice">Practice</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="apps.html">Apps</a></li>
+        </ul>
+        <a class="nav-pill" href="./#connect">Connect</a>
       </nav>
     </div>
   </header>
@@ -68,7 +80,7 @@
         </figure>
 
         <div class="hero-copy">
-          <p class="eyebrow">New York · Teleradiology nationwide</p>
+          <p class="eyebrow">New York · Multistate teleradiology</p>
           <h1>Simukayi <span class="nick">“Simi”</span> Mutasa, <span class="md">MD</span></h1>
           <p class="role"><span class="nw">Musculoskeletal Radiologist</span> <span class="dot" aria-hidden="true">·</span> <span class="nw">Founder, Ugen Imaging LLC</span></p>
           <hr class="rule">
@@ -122,7 +134,7 @@
             <div><dt>Fellowship</dt><dd>Musculoskeletal Radiology, Thomas Jefferson University Hospital</dd></div>
             <div><dt>Residency</dt><dd>Diagnostic Radiology, NewYork-Presbyterian / Columbia · Chief Resident</dd></div>
             <div><dt>Medical school</dt><dd>MD with AOA honors, The University of Texas Medical Branch</dd></div>
-            <div><dt>Undergraduate</dt><dd>BS Biochemistry, Engineering, The University of Texas at Austin</dd></div>
+            <div><dt>Undergraduate</dt><dd>BS Biochemistry, The University of Texas at Austin, with additional studies in petroleum engineering</dd></div>
             <div><dt>Languages</dt><dd>English, Shona</dd></div>
           </dl>
         </div>
@@ -136,22 +148,22 @@
         <h2 class="section-title">Reading, researching, building.</h2>
 
         <!-- 01 Clinical practice -->
-        <article class="thread">
+        <article class="thread" id="practice">
           <div class="thread-head">
             <span class="num">01</span>
             <h3>Clinical practice <span class="sub-h">Ugen Imaging LLC</span></h3>
           </div>
           <div class="thread-body">
             <p>
-              I founded Ugen Imaging in New York in 2021 to contract radiology services with hospitals,
-              imaging centers and teleradiology groups. It’s small by design: the radiologist you contract
+              I founded Ugen Imaging LLC, organized in New York in December 2021, to contract radiology services
+              with hospitals, imaging centers and teleradiology groups. It’s small by design: the radiologist you contract
               with is the one who reads your studies.
             </p>
             <div class="services">
               <div><h4>MSK subspecialty reads</h4><p>Fellowship-level interpretation of MRI, CT, ultrasound and radiography: sports and joint injury, arthroplasty, tumors and trauma.</p></div>
               <div><h4>Emergency &amp; general coverage</h4><p>Remote ED and overnight reads across all modalities.</p></div>
               <div><h4>Locums</h4><p>Short- and medium-term on-site coverage, including MSK and body procedures.</p></div>
-              <div><h4>Imaging-AI advisory</h4><p>Clinical evaluation of AI products, validation study design, and reading-room workflow assessment, from someone who has built and deployed these tools.</p></div>
+              <div><h4>Imaging-AI advisory</h4><p>Clinical evaluation of AI products, validation study design, and reading-room workflow assessment, from someone who has built imaging models in research and led a clinical AI platform integration.</p></div>
             </div>
             <p class="label">Licensed in 13 states <span class="asof">as of November 2026</span></p>
             <ul class="states" aria-label="Active state medical licenses">
@@ -195,25 +207,13 @@
               </figcaption>
             </figure>
 
-            <p class="label">Selected work</p>
-            <ol class="selected">
-              <li>
-                <a href="https://doi.org/10.1007/s10278-020-00364-8">Automated femoral neck fracture detection and classification</a>
-                <span><em>J Digit Imaging</em> 2020 · covered by <a href="https://www.healthimaging.com/topics/artificial-intelligence/ai-hip-fractures-emergency-radiology-triage">Health Imaging</a></span>
-              </li>
-              <li>
-                <a href="https://doi.org/10.1007/s10278-024-01136-4">Gradient-based saliency maps are not trustworthy explanations of MSK AI diagnoses</a>
-                <span><em>J Imaging Inform Med</em> 2024</span>
-              </li>
-              <li>
-                <a href="https://doi.org/10.1016/j.rcl.2021.07.011">Clinical artificial intelligence applications: musculoskeletal</a>
-                <span><em>Radiol Clin North Am</em> 2021</span>
-              </li>
-              <li>
-                <a href="https://doi.org/10.1007/s10278-018-0053-3">MABAL: a deep-learning architecture for machine-assisted bone age labeling</a>
-                <span><em>J Digit Imaging</em> 2018</span>
-              </li>
-            </ol>
+            <p class="label">Case studies</p>
+            <ul class="case-preview">
+              <li><a href="research.html#case-bone-age"><span class="k">MSK · 2018 · First author</span><span class="h">Bone age (MABAL)</span><span class="r">A custom network trained from scratch reached a test error of 0.536 years.</span></a></li>
+              <li><a href="research.html#case-hip-fracture"><span class="k">MSK · 2020 · First author</span><span class="h">Hip fracture detection</span><span class="r">Synthetic and CT-derived training images lifted fracture-detection AUC from 0.80 to 0.92.</span></a></li>
+              <li><a href="research.html#case-saliency"><span class="k">AI evaluation · 2024 · Co-author</span><span class="h">Do saliency maps explain?</span><span class="r">Six explanation methods were tested against radiologists, and none met all four trust criteria.</span></a></li>
+              <li><a href="research.html#case-breast-risk"><span class="k">Breast · 2019 · Co-author</span><span class="h">Risk from the mammogram</span><span class="r">A CNN risk score predicted later cancer independently of breast density (OR 4.42 vs. 1.67).</span></a></li>
+            </ul>
 
             <p class="label">Leadership &amp; teaching</p>
             <ul class="plain">
@@ -225,7 +225,7 @@
             </ul>
 
             <div class="thread-links">
-              <a class="arrow" href="research.html">Full publications, talks &amp; posters</a>
+              <a class="arrow" href="research.html#case-studies">Case studies &amp; full publication record</a>
               <a class="arrow" href="https://github.com/stmutasa">Code on GitHub</a>
             </div>
           </div>
@@ -240,65 +240,15 @@
           <div class="thread-body">
             <p>
               I build software for problems in my own life: health, money and time. Each is a full-stack app
-              that is deployed and in use, and most put AI at the core rather than bolting it on. All are
-              private, single-user tools.
+              that is deployed and in daily use. All are private, single-user tools, shown here with synthetic
+              demonstration data.
             </p>
-            <ul class="apps">
-              <li class="app">
-                <img src="assets/apps/housecall.png" width="64" height="64" alt="" loading="lazy">
-                <div>
-                  <h4>Housecall</h4>
-                  <p class="tagline">Your doctor in the family.</p>
-                  <p>Pulls Whoop, Garmin, Withings and Omron data into one dashboard and writes a goals-first health brief every morning, delivered as a push notification. Meals are logged by photo or text and analyzed by AI.</p>
-                  <p class="stack">Next.js · Prisma · Android (Capacitor) · Claude Vision</p>
-                </div>
-              </li>
-              <li class="app">
-                <img src="assets/apps/juli-a.png" width="64" height="64" alt="" loading="lazy">
-                <div>
-                  <h4>Juli-a</h4>
-                  <p class="tagline">A health companion built around the cycle.</p>
-                  <p>Puts the menstrual cycle at the center of training, nutrition, fasting, supplements and mood, with a weekly AI plan that explains the why behind every recommendation. It replaced a spreadsheet that had been kept since 2018.</p>
-                  <p class="stack">Expo / React Native · iOS TestFlight · Fastify · Postgres</p>
-                </div>
-              </li>
-              <li class="app">
-                <img src="assets/apps/kindred.png" width="64" height="64" alt="" loading="lazy">
-                <div>
-                  <h4>Kindred</h4>
-                  <p class="tagline">Keep the people you meet.</p>
-                  <p>A personal relationship CRM. Capture who you met and what you talked about, get nudged to follow up at the right cadence, and get AI-drafted messages and pre-meeting briefs. Success is measured by turning a first meeting into a second.</p>
-                  <p class="stack">Next.js · Google sign-in &amp; sync · Web push</p>
-                </div>
-              </li>
-              <li class="app">
-                <img src="assets/apps/donex.png" width="64" height="64" alt="" loading="lazy">
-                <div>
-                  <h4>DoneX</h4>
-                  <p class="tagline">An AI task companion.</p>
-                  <p>Tasks, notes and a voice assistant, plus a morning briefing and a one-tap day plan. A unified inbox triages Gmail and text messages into to-dos. It’s self-hosted as a single container.</p>
-                  <p class="stack">Next.js · SQLite · Installable PWA</p>
-                </div>
-              </li>
-              <li class="app">
-                <img src="assets/apps/portviz.png" width="64" height="64" alt="" loading="lazy">
-                <div>
-                  <h4>PortViz</h4>
-                  <p class="tagline">Portfolio visualization.</p>
-                  <p>A treemap of public holdings colored by return, a pre-IPO register marked to secondary-market prices, and a 1–10 margin-risk score. The arithmetic is deterministic; AI is used only for judgment and weekly price research.</p>
-                  <p class="stack">Python / FastAPI · dependency-free JS · PWA</p>
-                </div>
-              </li>
-              <li class="app">
-                <img src="assets/apps/iron-condor.png" width="64" height="64" alt="" loading="lazy">
-                <div>
-                  <h4>The Iron Condor</h4>
-                  <p class="tagline">An options trading desk.</p>
-                  <p>Live charts and technicals for a watchlist, plus a daily briefing in which Claude and ChatGPT each write an independent take, review the other’s, and an arbiter model reconciles them into one read.</p>
-                  <p class="stack">Next.js · multi-model AI pipeline · Android PWA</p>
-                </div>
-              </li>
+            <ul class="app-preview">
+              <li><a href="apps.html#housecall"><span class="thumb"><picture><source srcset="assets/apps/shots/housecall-thumb.webp" type="image/webp"><img src="assets/apps/shots/housecall-thumb.jpg" width="640" height="400" alt="" loading="lazy"></picture></span><span class="row"><span class="h">Housecall</span><span class="badge">Private tool</span></span><span class="r">Four health devices, one dashboard and a goals-first morning brief.</span></a></li>
+              <li><a href="apps.html#donex"><span class="thumb"><picture><source srcset="assets/apps/shots/donex-thumb.webp" type="image/webp"><img src="assets/apps/shots/donex-thumb.jpg" width="640" height="400" alt="" loading="lazy"></picture></span><span class="row"><span class="h">DoneX</span><span class="badge">Private tool</span></span><span class="r">Tasks, notes and an AI-triaged inbox, self-hosted on my own server.</span></a></li>
+              <li><a href="apps.html#portviz"><span class="thumb"><picture><source srcset="assets/apps/shots/portviz-thumb.webp" type="image/webp"><img src="assets/apps/shots/portviz-thumb.jpg" width="640" height="400" alt="" loading="lazy"></picture></span><span class="row"><span class="h">PortViz</span><span class="badge">Private tool</span></span><span class="r">A whole portfolio at a glance, including private holdings and margin risk.</span></a></li>
             </ul>
+            <p class="more-inline">More projects: Juli-a, Kindred and The Iron Condor. <a class="arrow" href="apps.html">See all apps</a></p>
           </div>
         </article>
       </div>
@@ -374,6 +324,5 @@
       <p class="fine">Professional information only. This site does not provide medical advice or establish a physician–patient relationship.</p>
     </div>
   </footer>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
