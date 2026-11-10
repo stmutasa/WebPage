@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>How I evaluate clinical AI · Simukayi Mutasa, MD</title>
+  <meta name="description" content="Five questions a radiologist asks before trusting an imaging AI model: validation, failure modes, explanations, design and workflow fit.">
+  <meta name="theme-color" content="#0e1829">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://stmutasa.github.io/WebPage/evaluating-clinical-ai.html">
+  <meta property="og:site_name" content="Simukayi Mutasa, MD">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How I evaluate clinical AI · Simukayi Mutasa, MD">
+  <meta property="og:description" content="Five questions to ask before trusting an imaging AI model, grounded in published work on overfitting, network design and saliency maps.">
+  <meta property="og:url" content="https://stmutasa.github.io/WebPage/evaluating-clinical-ai.html">
+  <meta property="og:image" content="https://stmutasa.github.io/WebPage/assets/og/research.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@docsimimd">
+  <meta name="twitter:title" content="How I evaluate clinical AI · Simukayi Mutasa, MD">
+  <meta name="twitter:description" content="Five questions to ask before trusting an imaging AI model, grounded in published work on overfitting, network design and saliency maps.">
+  <meta name="twitter:image" content="https://stmutasa.github.io/WebPage/assets/og/research.png">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="site.js" defer></script>
+  <style>
+    .article { max-width: 720px; padding-top: 40px; padding-bottom: 72px; }
+    .article h2 { font-size: clamp(1.6rem, 5vw, 2rem); margin: 2.5rem 0 1rem; }
+    .article p { font-size: 1.05rem; }
+    .kind { display: inline-block; font: 600 .66rem/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; padding: 5px 8px; border-radius: 6px; margin-right: 6px; vertical-align: 2px; }
+    .kind-pub { background: var(--navy); color: var(--on-navy); }
+    .kind-op { border: 1px dashed var(--gold-deco); color: var(--accent); }
+    .refs { padding-left: 1.2rem; font-size: .92rem; color: var(--muted); display: grid; gap: 10px; }
+    sup a { text-decoration: none; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="mark" href="./" aria-label="Simukayi Mutasa, MD: home">S<span>·</span>M</a>
+      <nav aria-label="Primary">
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="./#practice">Practice</a></li>
+          <li><a href="research.html" aria-current="page">Research</a></li>
+          <li><a href="apps.html">Apps</a></li>
+        </ul>
+        <a class="nav-pill" href="./#connect">Connect</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Notes</p>
+        <h1>How I evaluate clinical AI</h1>
+        <p>Five questions I ask before I trust an imaging model, drawn from my published work on overfitting, network design and saliency maps.</p>
+      </div>
+    </section>
+    <div class="wrap article">
+      <p class="draft-note"><strong>Draft, not published.</strong> Sections marked “Published finding” restate the cited papers. Sections marked “My view” are new first-person opinions written for your review: edit, cut or approve each one. Items in [brackets] need your input.</p>
+
+      <p><span class="kind kind-op">My view · draft for review</span> I have built imaging models, co-authored a study that tested how they explain themselves, and taught radiologists to read AI papers. When a vendor or a paper tells me a model works, these are the questions I ask first. None of them needs a computer-science degree to answer.</p>
+
+      <h2>1. Was it tested on data it never saw, from somewhere else?</h2>
+      <p><span class="kind kind-pub">Published finding</span> Overfitting means a model has learned features of its training sample that do not generalize to the wider population. The most effective remedy is more, and more representative, training data; around 1,000 images per class is a rough starting point drawn from ImageNet, not a rule. Augmentation, transfer learning and regularization help, but external validation is necessary before clinical use, and there are documented cases of performance changing on another institution’s data.<sup><a href="#r1">1</a></sup></p>
+      <p><span class="kind kind-op">My view · draft for review</span> I ask where the test images came from: which sites, scanners and patient populations. A held-out slice of the same hospital’s data is a useful internal test, but it is not external validation. I hold my own work to the same standard. The bone-age and hip-fracture models I published were both developed on single-institution data.<sup><a href="#r4">4</a>,<a href="#r5">5</a></sup></p>
+
+      <h2>2. How does it fail, and on whom?</h2>
+      <p><span class="kind kind-pub">Published finding</span> In our hip-fracture study, nondisplaced Garden I/II fractures, the subtle ones, had only 127 real radiographs. Adding GAN-generated and CT-derived training images raised two-class AUC from 0.80 to 0.92, and three-class accuracy (86.0%) was lower than two-class accuracy (92.3%).<sup><a href="#r4">4</a></sup></p>
+      <p><span class="kind kind-op">My view · draft for review</span> A single headline AUC hides the cases that matter. I ask for sensitivity by class and by subgroup, the false-positive rate at the operating threshold the product actually uses, and a sample of misses to look at myself. When synthetic data were used in training, I check that the test set is made of real images. Ours was.</p>
+
+      <h2>3. Do the explanations deserve trust?</h2>
+      <p><span class="kind kind-pub">Published finding</span> We tested six gradient-based saliency methods on upper-extremity radiographs. All six localized abnormalities worse than radiologists (AUPRC 0.438–0.590 vs. 0.816), and all were less repeatable and reproducible. None met all four trustworthiness criteria, and the study recommends caution and rigorous evaluation before clinical use.<sup><a href="#r3">3</a></sup></p>
+      <p><span class="kind kind-op">My view · draft for review</span> A heatmap over the right bone is not evidence that the model is right for the right reason. I treat saliency maps as an interface feature to evaluate, not a safety feature. When localization matters clinically, I want outputs that were themselves validated against ground truth, such as boxes or segmentations, rather than an after-the-fact overlay.</p>
+
+      <h2>4. Is the design matched to the task?</h2>
+      <p><span class="kind kind-pub">Published finding</span> Our review of CNN architecture explains the building blocks of these networks so that radiologists can read a methods section critically.<sup><a href="#r2">2</a></sup> In our bone-age work, a purpose-built network trained from scratch on a large institutional dataset outperformed published approaches at the time, contrary to the assumption that medical imaging needs large pretrained networks.<sup><a href="#r5">5</a></sup></p>
+      <p><span class="kind kind-op">My view · draft for review</span> I ask what the model actually sees: input resolution, cropping, and whether pretraining came from natural photographs. Subtle findings such as a nondisplaced fracture line can disappear when a radiograph is shrunk to fit a network. [Confirm, or replace with an example from your experience.]</p>
+
+      <h2>5. Does it fit the reading room?</h2>
+      <p><span class="kind kind-op">My view · draft for review</span> Accuracy on a test set is only half the question. I ask where the output appears (worklist priority, image overlay or draft report), what happens when it is wrong, who notices when performance drifts after deployment, and whether it saves time or adds clicks. [Add one concrete lesson from leading the NewYork-Presbyterian × Arterys integration, 2018–2020.]</p>
+
+      <p><span class="kind kind-op">My view · draft for review</span> None of these questions is exotic. They are the same ones we ask of any new test in medicine: was it validated on patients like mine, how does it fail, and does it change what I do? AI earns no exemption.</p>
+
+      <h2 id="refs">References</h2>
+      <ol class="refs">
+        <li id="r1">Mutasa S, Sun S, Ha R. Understanding artificial intelligence based radiology studies: what is overfitting? <em>Clin Imaging</em>. 2020;65:96-99. <a href="https://doi.org/10.1016/j.clinimag.2020.04.025">doi:10.1016/j.clinimag.2020.04.025</a></li>
+        <li id="r2">Mutasa S, Sun S, Ha R. Understanding artificial intelligence based radiology studies: CNN architecture. <em>Clin Imaging</em>. 2021;80:72-76. <a href="https://doi.org/10.1016/j.clinimag.2021.06.033">doi:10.1016/j.clinimag.2021.06.033</a></li>
+        <li id="r3">Venkatesh K, Mutasa S, Moore F, Sulam J, Yi PH. Gradient-based saliency maps are not trustworthy visual explanations of automated AI musculoskeletal diagnoses. <em>J Imaging Inform Med</em>. 2024;37(5):2490-2499. <a href="https://doi.org/10.1007/s10278-024-01136-4">doi:10.1007/s10278-024-01136-4</a></li>
+        <li id="r4">Mutasa S, Varada S, Goel A, Wong TT, Rasiej MJ. Advanced deep learning techniques applied to automated femoral neck fracture detection and classification. <em>J Digit Imaging</em>. 2020;33(5):1209-1217. <a href="https://doi.org/10.1007/s10278-020-00364-8">doi:10.1007/s10278-020-00364-8</a></li>
+        <li id="r5">Mutasa S, Chang PD, Ruzal-Shapiro C, Ayyala R. MABAL: a novel deep-learning architecture for machine-assisted bone age labeling. <em>J Digit Imaging</em>. 2018;31(4):513-519. <a href="https://doi.org/10.1007/s10278-018-0053-3">doi:10.1007/s10278-018-0053-3</a></li>
+      </ol>
+    </div>
+  </main>
+  <footer class="footer"><div class="wrap"><p><a href="research.html">← Research</a></p><p>© <span id="yr">2026</span> Simukayi Mutasa, MD</p></div></footer>
+</body>
+</html>
