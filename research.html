@@ -72,6 +72,24 @@
         <h2>Four studies, in brief</h2>
         <p class="count">Problem, contribution, method, result and limitation for four published studies. Numbers are taken from the final publications. All are research models, not deployed clinical products.</p>
         <div class="case-grid">
+        <article class="case" id="case-breast-risk" aria-labelledby="case-breast-risk-h">
+          <div>
+            <p class="case-tag">Breast imaging &nbsp;|&nbsp; Acad Radiol 2019 · Co-author; model developer</p>
+            <h3 id="case-breast-risk-h">Breast cancer risk from the mammogram itself</h3>
+            <dl>
+            <div><dt>Clinical problem</dt><dd>Breast density is a coarse risk marker. The question was whether a network reading the whole mammogram could stratify future risk better.</dd></div>
+            <div><dt>My contribution</dt><dd>I wrote the source code and programmed the CNN risk model, working in Columbia’s breast imaging AI group with Ha (first author) and Jambawalikar (senior author). This line of work led to my NIH StARR-funded CAPRI resident research year.</dd></div>
+            <div><dt>Approach</dt><dd>Retrospective case-control study: prior mammograms of 210 women who later developed cancer (420 images) vs. 527 controls (1,054 images). A fully convolutional network produced a pixel-wise risk map, with an 80/20 split and five-fold cross-validation.</dd></div>
+            <div><dt>Published finding</dt><dd>The network score and breast density were independent predictors. The network’s odds ratio was 4.42 (95% CI 3.4–5.7) vs. 1.67 (1.4–1.9) for density, with 72% accuracy in identifying the case group.</dd></div>
+            <div><dt>Limitation</dt><dd>Single institution, retrospective and relatively small. The authors expected more data to improve the model. A research model.</dd></div>
+              <div><dt>Read more</dt><dd class="links"><a href="https://doi.org/10.1016/j.acra.2018.06.020">Paper (DOI)</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8114104/">Full text (PMC)</a> <a href="https://www.columbiaradiology.org/news/dr-simukayi-mutasa-receives-grant-columbia-cancer-training-program-resident-investigators-capri">CAPRI award announcement</a></dd></div>
+            </dl>
+          </div>
+          <figure>
+            <svg viewBox="0 0 360 152" role="img" aria-labelledby="t-or d-or"><title id="t-or">Odds ratios for later breast cancer</title><desc id="d-or">CNN pixel-wise risk score odds ratio 4.42 (95% CI 3.4 to 5.7); breast density odds ratio 1.67 (95% CI 1.4 to 1.9). Reference line at 1.</desc><line class="viz-arrow" x1="148.3" y1="14" x2="148.3" y2="110" stroke-dasharray="3 3"/><text class="viz-text" x="102" y="40" text-anchor="end">CNN risk score</text><line class="viz-arrow" x1="240.3" y1="36" x2="328.5" y2="36" style="stroke-width:2"/><rect class="viz-bar" x="273.4" y="30" width="12" height="12" rx="2"/><text class="viz-muted" x="279.4" y="24" text-anchor="middle">4.42 (3.4–5.7)</text><text class="viz-text" x="102" y="86" text-anchor="end">Breast density</text><line class="viz-arrow" x1="163.7" y1="82" x2="182.8" y2="82" style="stroke-width:2"/><rect class="viz-bar-2" x="168.0" y="76" width="12" height="12" rx="2"/><text class="viz-muted" x="174.0" y="70" text-anchor="middle">1.67 (1.4–1.9)</text><text class="viz-muted" x="110.0" y="128" text-anchor="middle">0</text><text class="viz-muted" x="148.3" y="128" text-anchor="middle">1</text><text class="viz-muted" x="186.7" y="128" text-anchor="middle">2</text><text class="viz-muted" x="263.3" y="128" text-anchor="middle">4</text><text class="viz-muted" x="340.0" y="128" text-anchor="middle">6</text><text class="viz-muted" x="110" y="144">Odds ratio (95% CI); dashed line = no association</text></svg>
+            <figcaption>Multivariate odds ratios as published.</figcaption>
+          </figure>
+        </article>
         <article class="case" id="case-bone-age" aria-labelledby="case-bone-age-h">
           <div>
             <p class="case-tag">MSK · Pediatric &nbsp;|&nbsp; J Digit Imaging 2018 · First author</p>
@@ -104,17 +122,17 @@
             </dl>
           </div>
           <figure>
-            <svg viewBox="0 0 360 164" role="img" aria-labelledby="t-139878433387904 d-139878433387904"><title id="t-139878433387904">Fracture vs. no fracture AUC by augmentation strategy</title><desc id="d-139878433387904">AUC 0.80 without advanced augmentation, 0.87 with GAN-generated images only, 0.91 with CT-derived DRRs only, and 0.92 with both.</desc><text class="viz-text" x="96" y="28" text-anchor="end">No advanced aug.</text><rect class="viz-bar-2" x="104" y="17" width="169.6" height="16" rx="3"/><text class="viz-text" x="279.6" y="29">0.80</text><text class="viz-text" x="96" y="58" text-anchor="end">GAN only</text><rect class="viz-bar-2" x="104" y="47" width="184.4" height="16" rx="3"/><text class="viz-text" x="294.4" y="59">0.87</text><text class="viz-text" x="96" y="88" text-anchor="end">DRR only</text><rect class="viz-bar-2" x="104" y="77" width="192.9" height="16" rx="3"/><text class="viz-text" x="302.9" y="89">0.91</text><text class="viz-text" x="96" y="118" text-anchor="end">GAN + DRR</text><rect class="viz-bar" x="104" y="107" width="195.0" height="16" rx="3"/><text class="viz-text" x="305.0" y="119">0.92</text><line class="viz-line" x1="104" y1="10" x2="104" y2="134"/><text class="viz-muted" x="104.0" y="150" text-anchor="middle">0</text><text class="viz-muted" x="210.0" y="150" text-anchor="middle">0.50</text><text class="viz-muted" x="316.0" y="150" text-anchor="middle">1.00</text></svg>
+            <svg viewBox="0 0 360 164" role="img" aria-labelledby="t-140633231969984 d-140633231969984"><title id="t-140633231969984">Fracture vs. no fracture AUC by augmentation strategy</title><desc id="d-140633231969984">AUC 0.80 without advanced augmentation, 0.87 with GAN-generated images only, 0.91 with CT-derived DRRs only, and 0.92 with both.</desc><text class="viz-text" x="96" y="28" text-anchor="end">No advanced aug.</text><rect class="viz-bar-2" x="104" y="17" width="169.6" height="16" rx="3"/><text class="viz-text" x="279.6" y="29">0.80</text><text class="viz-text" x="96" y="58" text-anchor="end">GAN only</text><rect class="viz-bar-2" x="104" y="47" width="184.4" height="16" rx="3"/><text class="viz-text" x="294.4" y="59">0.87</text><text class="viz-text" x="96" y="88" text-anchor="end">DRR only</text><rect class="viz-bar-2" x="104" y="77" width="192.9" height="16" rx="3"/><text class="viz-text" x="302.9" y="89">0.91</text><text class="viz-text" x="96" y="118" text-anchor="end">GAN + DRR</text><rect class="viz-bar" x="104" y="107" width="195.0" height="16" rx="3"/><text class="viz-text" x="305.0" y="119">0.92</text><line class="viz-line" x1="104" y1="10" x2="104" y2="134"/><text class="viz-muted" x="104.0" y="150" text-anchor="middle">0</text><text class="viz-muted" x="210.0" y="150" text-anchor="middle">0.50</text><text class="viz-muted" x="316.0" y="150" text-anchor="middle">1.00</text></svg>
             <figcaption>Two-class AUC on the held-out set, as reported for each augmentation strategy. Axis starts at zero.</figcaption>
           </figure>
         </article>
         <article class="case" id="case-saliency" aria-labelledby="case-saliency-h">
           <div>
-            <p class="case-tag">AI evaluation · MSK &nbsp;|&nbsp; J Imaging Inform Med 2024 · Co-author (2nd of 5)</p>
+            <p class="case-tag">AI evaluation · MSK &nbsp;|&nbsp; J Imaging Inform Med 2024 · Co-author; ground-truth reader</p>
             <h3 id="case-saliency-h">Are saliency maps trustworthy explanations?</h3>
             <dl>
             <div><dt>Clinical problem</dt><dd>Heatmaps are widely used to show “where the AI looked,” but their reliability had not been tested on musculoskeletal radiographs.</dd></div>
-            <div><dt>My contribution</dt><dd>Co-author on a Johns Hopkins and University of Maryland study led by Venkatesh (first author) and Yi (senior author).</dd></div>
+            <div><dt>My contribution</dt><dd>Co-author, and one of the three fellowship-trained MSK radiologists who drew the ground-truth boxes, on a Johns Hopkins and University of Maryland study led by Venkatesh (first author) and Yi (senior author).</dd></div>
             <div><dt>Approach</dt><dd>Networks trained on the public Stanford MURA upper-extremity dataset. Six gradient-based saliency methods were scored on localization, repeatability, reproducibility and sensitivity to model weights, against consensus boxes from three fellowship-trained MSK radiologists.</dd></div>
             <div><dt>Published finding</dt><dd>Every method localized abnormalities worse than radiologists (AUPRC 0.438–0.590 vs. 0.816) and was less repeatable and reproducible. Five passed the weight-sensitivity test, but none met all four criteria. The authors recommend caution before clinical use.</dd></div>
             <div><dt>Limitation</dt><dd>One public dataset of upper-extremity radiographs, and gradient-based methods only. Results may differ for other explanation methods, body parts or modalities.</dd></div>
@@ -124,24 +142,6 @@
           <figure>
             <svg viewBox="0 0 360 188" role="img" aria-labelledby="t-sal d-sal"><title id="t-sal">Saliency methods versus radiologists</title><desc id="d-sal">Localization AUPRC: methods 0.438 to 0.590, radiologists 0.816. Repeatability IoU: methods 0.427 to 0.551, radiologists 0.613. Reproducibility IoU: methods 0.250 to 0.502, radiologists 0.613.</desc><text class="viz-text" x="104" y="26" text-anchor="end">Localization</text><text class="viz-muted" x="104" y="40" text-anchor="end">AUPRC</text><line class="viz-line" x1="112" y1="24" x2="340" y2="24"/><rect class="viz-bar-2" x="211.9" y="18" width="34.7" height="12" rx="6"/><circle class="viz-mark" cx="298.0" cy="24" r="5"/><text class="viz-text" x="104" y="66" text-anchor="end">Repeatability</text><text class="viz-muted" x="104" y="80" text-anchor="end">IoU</text><line class="viz-line" x1="112" y1="64" x2="340" y2="64"/><rect class="viz-bar-2" x="209.4" y="58" width="28.3" height="12" rx="6"/><circle class="viz-mark" cx="251.8" cy="64" r="5"/><text class="viz-text" x="104" y="106" text-anchor="end">Reproducibility</text><text class="viz-muted" x="104" y="120" text-anchor="end">IoU</text><line class="viz-line" x1="112" y1="104" x2="340" y2="104"/><rect class="viz-bar-2" x="169.0" y="98" width="57.5" height="12" rx="6"/><circle class="viz-mark" cx="251.8" cy="104" r="5"/><text class="viz-muted" x="112.0" y="142" text-anchor="middle">0</text><text class="viz-muted" x="226.0" y="142" text-anchor="middle">0.5</text><text class="viz-muted" x="340.0" y="142" text-anchor="middle">1</text><rect class="viz-bar-2" x="112" y="155" width="22" height="10" rx="5"/><text class="viz-muted" x="140" y="164">Six saliency methods (range)</text><circle class="viz-mark" cx="123" cy="176" r="4.5"/><text class="viz-muted" x="140" y="180">Radiologist average</text></svg>
             <figcaption>Reported ranges across the six methods versus the radiologist average. Higher is better.</figcaption>
-          </figure>
-        </article>
-        <article class="case" id="case-breast-risk" aria-labelledby="case-breast-risk-h">
-          <div>
-            <p class="case-tag">Breast imaging &nbsp;|&nbsp; Acad Radiol 2019 · Co-author (4th of 7)</p>
-            <h3 id="case-breast-risk-h">Breast cancer risk from the mammogram itself</h3>
-            <dl>
-            <div><dt>Clinical problem</dt><dd>Breast density is a coarse risk marker. The question was whether a network reading the whole mammogram could stratify future risk better.</dd></div>
-            <div><dt>My contribution</dt><dd>Co-author in Columbia’s breast imaging AI group, led by Ha (first author) and Jambawalikar (senior author). Columbia’s 2019 CAPRI announcement credits me with helping develop the group’s mammographic risk models, which my NIH StARR-funded resident research year built on.</dd></div>
-            <div><dt>Approach</dt><dd>Retrospective case-control study: prior mammograms of 210 women who later developed cancer (420 images) vs. 527 controls (1,054 images). A fully convolutional network produced a pixel-wise risk map, with an 80/20 split and five-fold cross-validation.</dd></div>
-            <div><dt>Published finding</dt><dd>The network score and breast density were independent predictors. The network’s odds ratio was 4.42 (95% CI 3.4–5.7) vs. 1.67 (1.4–1.9) for density, with 72% accuracy in identifying the case group.</dd></div>
-            <div><dt>Limitation</dt><dd>Single institution, retrospective and relatively small. The authors expected more data to improve the model. A research model.</dd></div>
-              <div><dt>Read more</dt><dd class="links"><a href="https://doi.org/10.1016/j.acra.2018.06.020">Paper (DOI)</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8114104/">Full text (PMC)</a> <a href="https://www.columbiaradiology.org/news/dr-simukayi-mutasa-receives-grant-columbia-cancer-training-program-resident-investigators-capri">CAPRI award announcement</a></dd></div>
-            </dl>
-          </div>
-          <figure>
-            <svg viewBox="0 0 360 152" role="img" aria-labelledby="t-or d-or"><title id="t-or">Odds ratios for later breast cancer</title><desc id="d-or">CNN pixel-wise risk score odds ratio 4.42 (95% CI 3.4 to 5.7); breast density odds ratio 1.67 (95% CI 1.4 to 1.9). Reference line at 1.</desc><line class="viz-arrow" x1="148.3" y1="14" x2="148.3" y2="110" stroke-dasharray="3 3"/><text class="viz-text" x="102" y="40" text-anchor="end">CNN risk score</text><line class="viz-arrow" x1="240.3" y1="36" x2="328.5" y2="36" style="stroke-width:2"/><rect class="viz-bar" x="273.4" y="30" width="12" height="12" rx="2"/><text class="viz-muted" x="279.4" y="24" text-anchor="middle">4.42 (3.4–5.7)</text><text class="viz-text" x="102" y="86" text-anchor="end">Breast density</text><line class="viz-arrow" x1="163.7" y1="82" x2="182.8" y2="82" style="stroke-width:2"/><rect class="viz-bar-2" x="168.0" y="76" width="12" height="12" rx="2"/><text class="viz-muted" x="174.0" y="70" text-anchor="middle">1.67 (1.4–1.9)</text><text class="viz-muted" x="110.0" y="128" text-anchor="middle">0</text><text class="viz-muted" x="148.3" y="128" text-anchor="middle">1</text><text class="viz-muted" x="186.7" y="128" text-anchor="middle">2</text><text class="viz-muted" x="263.3" y="128" text-anchor="middle">4</text><text class="viz-muted" x="340.0" y="128" text-anchor="middle">6</text><text class="viz-muted" x="110" y="144">Odds ratio (95% CI); dashed line = no association</text></svg>
-            <figcaption>Multivariate odds ratios as published.</figcaption>
           </figure>
         </article>
         </div>
@@ -323,7 +323,6 @@
           <div>
             <p class="year">LEADERSHIP &amp; SERVICE</p>
             <ul class="cites">
-              <li><span class="t">Track Chair, “Future of Radiology”</span>13th Annual RSSA Conference</li>
               <li><span class="t">Machine Learning Research Tools Subcommittee</span>Society for Imaging Informatics in Medicine (SIIM), 2019 – present</li>
               <li><span class="t">Clinical Lead, Arterys AI platform integration</span>NewYork-Presbyterian Hospital, 2018 – 2020</li>
               <li><span class="t">Chief Resident, Diagnostic Radiology</span>Columbia University Irving Medical Center, 2017 – 2019</li>
