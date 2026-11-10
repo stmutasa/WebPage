@@ -1,7 +1,7 @@
 # WebPage
 
 Personal site for Simukayi "Simi" Mutasa, MD. Plain static HTML/CSS: no build step, no framework.
-Live at https://stmutasa.github.io/WebPage/
+Live at https://simirad.com/
 
 | File | Purpose |
 |---|---|
@@ -27,7 +27,10 @@ python3 -m http.server 8000
 When the business email changes, update it in `index.html` (3 places, search for `mailto:`),
 `simi-mutasa.vcf` (`EMAIL` line) and the JSON-LD block at the top of `index.html`.
 
-## Custom domain
+## Domain
 
-Add the domain under Settings → Pages, create the DNS records GitHub lists, then update the
-absolute URLs (`canonical`, `og:url`, `og:image`, JSON-LD, and `URL` in the vCard).
+Served at https://simirad.com via GitHub Pages (the `CNAME` file sets the custom domain).
+DNS is on Cloudflare: four `A` records for `@` pointing to GitHub Pages and `www` as a CNAME
+to `stmutasa.github.io`, all set to "DNS only". If the domain ever changes, update `CNAME`
+and the absolute URLs (`canonical`, `og:url`, `og:image`, `twitter:image`, JSON-LD and `URL`
+in the vCard).

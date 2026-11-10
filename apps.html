@@ -11,20 +11,20 @@
   <link rel="stylesheet" href="styles.css">
   <title>Apps · Simukayi Mutasa, MD</title>
   <meta name="description" content="Private, single-user software built by radiologist Simukayi Mutasa, MD: Housecall, DoneX, PortViz and more, shown with synthetic demonstration data.">
-  <link rel="canonical" href="https://stmutasa.github.io/WebPage/apps.html">
+  <link rel="canonical" href="https://simirad.com/apps.html">
   <meta property="og:site_name" content="Simukayi Mutasa, MD">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Apps · Simukayi Mutasa, MD">
   <meta property="og:description" content="Private tools for health, money and time: Housecall, DoneX, PortViz and more, shown with synthetic demonstration data.">
-  <meta property="og:url" content="https://stmutasa.github.io/WebPage/apps.html">
-  <meta property="og:image" content="https://stmutasa.github.io/WebPage/assets/og/apps.png">
+  <meta property="og:url" content="https://simirad.com/apps.html">
+  <meta property="og:image" content="https://simirad.com/assets/og/apps.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@docsimimd">
   <meta name="twitter:title" content="Apps · Simukayi Mutasa, MD">
   <meta name="twitter:description" content="Private tools for health, money and time: Housecall, DoneX, PortViz and more, shown with synthetic demonstration data.">
-  <meta name="twitter:image" content="https://stmutasa.github.io/WebPage/assets/og/apps.png">
+  <meta name="twitter:image" content="https://simirad.com/assets/og/apps.png">
   <script>document.documentElement.classList.add('js')</script>
   <script src="site.js" defer></script>
 </head>
@@ -77,7 +77,6 @@
             <dl>
               <div><dt>Problem</dt><dd>My health data lived in four separate apps (Whoop, Garmin, Withings and an Omron blood-pressure cuff), and none of them connected the numbers to what I was trying to change.</dd></div>
               <div><dt>What it does</dt><dd>Brings all four sources into one database and dashboard: body composition, 7-day averages and trends. Every morning it composes a brief on progress toward a long-term goal and the current month’s goals, written as a change from the previous day and delivered as a push notification. Meals are logged by photo or by typing what I ate.</dd></div>
-              <div><dt>My contribution</dt><dd>I defined the product: which devices to integrate, a two-tier goal system (one fixed long-term goal plus monthly goals I set myself), and the rule that every brief reports what changed since the last one. I set the design direction and run it on my own Android phone.</dd></div>
             </dl>
             <p class="stack">Built with Next.js · Prisma + SQLite · Android shell (Capacitor) · Railway</p>
           </div>
@@ -104,7 +103,6 @@
             <dl>
               <div><dt>Problem</dt><dd>Tasks reached me through email, text messages and my own head, and a plain to-do list could neither sort them nor plan a day around them.</dd></div>
               <div><dt>What it does</dt><dd>Tasks with projects, tags, subtasks and recurrence; notes and checklists; a morning briefing and a one-tap day plan; and one inbox where AI triages Gmail and forwarded texts into tasks. Voice capture uses the browser’s built-in speech recognition, so no audio goes to a third-party service.</dd></div>
-              <div><dt>My contribution</dt><dd>I specified the feature set and the self-hosted design: a single container with its own SQLite file on my server, a PIN-protected login, and my own AI key as the only outside dependency, with every AI call made server-side.</dd></div>
             </dl>
             <p class="stack">Built with Next.js 15 · SQLite · Docker · installable PWA</p>
           </div>
@@ -131,7 +129,6 @@
             <dl>
               <div><dt>Problem</dt><dd>Brokerage apps show a list of positions. I wanted to see a whole portfolio at once, including private holdings with no public price, and to know how close it was to a margin call.</dd></div>
               <div><dt>What it does</dt><dd>A treemap of public holdings, grouped by sector, sized by value and colored by return over a chosen period. A register of private holdings valued at the best available market price. A 1–10 margin-call risk score.</dd></div>
-              <div><dt>My contribution</dt><dd>I set the rules: private holdings are valued from the listed price first, then secondary-market quotes, and only then the last funding round. Fees are modelled per holding. Every dollar figure is computed deterministically in code, and the language model is used only for the risk-severity judgment and weekly price research, on a fixed update schedule.</dd></div>
             </dl>
             <p class="stack">Built with Python · FastAPI · APScheduler · yfinance · dependency-free JavaScript · PWA</p>
           </div>
